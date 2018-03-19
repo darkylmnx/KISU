@@ -38,3 +38,12 @@
     }
 ]
 ```
+
+Later, we could add to the data the starting point : 
+https://developers.google.com/youtube/iframe_api_reference#Example_Video_Player_Constructors
+```
+loadVideoById({'videoId': 'bHQqvYy5KYo',
+               'startSeconds': 5,
+               'endSeconds': 60,
+               'suggestedQuality': 'large'});
+```
