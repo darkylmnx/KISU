@@ -6,6 +6,14 @@
 
 **Kisu** is a visual radio that showcases anime openings and endings.
 
+## Vocabulary
+
+sj : Shojo
+sn : Shonen
+se : Seinen
+o : Opening
+e : Ending
+
 ## Features : Must have
 
 1. Create a player
