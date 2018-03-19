@@ -1,24 +1,41 @@
-var player;
+import { getNextVideo } from './data-handler';
 
-function onYouTubeIframeAPIReady() {
+export var player;
+export default function onYouTubeIframeAPIReady() {
   player = new YT.Player('aoe-player', {
     playerVars: {
       autoplay: 1,
       controls: 0,
       disablekb: 1,
       hl: 'en',
+      cc_load_policy: 0,
+      fs: 0,
       modestbranding: 1,
       rel: 0,
-      showinfo: 0
+      showinfo: 0,
+      iv_load_policy: 3
     },
     height: '100%',
     width: '100%',
-    videoId: 'M7lc1UVf-VE'
-    // events: {
-    //   'onReady': onPlayerReady,
-    //   'onStateChange': onPlayerStateChange
-    // }
+    events: {
+      onReady: function() {
+        loadNextVideo();
+      },
+      // 'onStateChange': onPlayerStateChange
+    }
   });
+}
 
-  console.log(player)
+export function playVideo(){
+  player.playVideo();
+}
+
+export function pauseVideo(){
+  player.pauseVideo();
+}
+
+export function loadNextVideo() {
+  var video = getNextVideo();
+  player.loadVideoById(video.id);
+  return video;
 }
