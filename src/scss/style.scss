@@ -1,0 +1,103 @@
+// FONTS
+@font-face {
+	font-family: "Lato-Regular";
+    src: url('../assets/fonts/Lato-Regular.ttf');
+}
+@font-face {
+	font-family: "Farsan-Regular";
+    src: url('../assets/fonts/Farsan-Regular.ttf');
+}
+$Farsan: "Farsan-Regular";
+$Lato: "Lato-Regular";
+
+// font-size
+$xxBig: 7.2rem;
+$xBig: 4rem;
+$Big: 3rem;
+$Med: 2.4rem;
+$Reg: 2rem;
+$Sml: 1.8rem;
+$xSml: 1.0rem;
+
+
+// GLOBAL
+body {
+  background: lightcyan;
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  background: blue;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_logo {
+    width: 150px;
+    height: auto;
+  }
+  &_menu {
+    background: orange;
+    width: 50px;
+    height: 50px;
+    margin: 0 30px;
+    cursor: pointer;
+  }
+}
+.infos {
+  padding: 50px;
+  &_titleBox {
+    display: flex;
+    align-items: flex-end;
+
+    &_title {
+      font-family: $Lato;
+      font-size: $Big;
+    }
+    &_type {
+      background: #2E84FC;
+      padding: 5px;
+      margin: 0 15px;
+      text-transform: uppercase;
+      font-family: $Lato;
+      font-size: $xSml;
+    }
+  }
+  &_author {
+    text-transform: uppercase;
+    margin: 5px 0 15px 0;
+    font-family: $Lato;
+    font-size: $Sml;
+
+  }
+  &_tags {
+    &_tag {
+      padding: 5px;
+      margin-right: 15px;
+      border-radius: 5px;
+      font-family: $Lato;
+      font-size: $xSml;
+    }
+  }
+}
+#shonen {
+  background: lightblue;
+  color: darkblue;
+}
+#action {
+  background: red;
+  color: darkred;
+}
+#aventure {
+  background: lightgreen;
+  color: darkgreen;
+}
+
+.test  {
+  width: 100px;
+  height: 100px;
+  background: green;
+}
