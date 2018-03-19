@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({20:[function(require,module,exports) {
+})({32:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],14:[function(require,module,exports) {
+},{}],29:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,19 +132,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":20}],5:[function(require,module,exports) {
+},{"./bundle-url":32}],20:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":14}],4:[function(require,module,exports) {
+},{"_css_loader":29}],21:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/fonts/Lato-Regular.ttf":[["7ad393b83d7ff2e0ada77c291832b226.ttf",16],16],"./../assets/fonts/Farsan-Regular.ttf":[["f32975e31bc36044c9831acb66c9c5a1.ttf",17],17],"./../assets/imgs/bg.jpg":[["83239aae8d1630e5bb71a4298c0dcb30.jpg",24],24],"_css_loader":14}],8:[function(require,module,exports) {
+},{"./../assets/fonts/Lato-Regular.ttf":[["7ad393b83d7ff2e0ada77c291832b226.ttf",35],35],"./../assets/fonts/Farsan-Regular.ttf":[["f32975e31bc36044c9831acb66c9c5a1.ttf",34],34],"./../assets/imgs/bg.jpg":[["83239aae8d1630e5bb71a4298c0dcb30.jpg",36],36],"_css_loader":29}],23:[function(require,module,exports) {
 window.playlist = [{
   "id": "CYPDjli1iRw",
   "anime": "One Punch Man",
@@ -186,32 +186,7 @@ window.playlist = [{
   "nb": "1",
   "category": "se"
 }];
-},{}],10:[function(require,module,exports) {
-var player;
-
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('aoe-player', {
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      disablekb: 1,
-      hl: 'en',
-      modestbranding: 1,
-      rel: 0,
-      showinfo: 0
-    },
-    height: '100%',
-    width: '100%',
-    videoId: 'M7lc1UVf-VE'
-    // events: {
-    //   'onReady': onPlayerReady,
-    //   'onStateChange': onPlayerStateChange
-    // }
-  });
-
-  console.log(player);
-}
-},{}],9:[function(require,module,exports) {
+},{}],25:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -237,8 +212,63 @@ function getNextVideo() {
 function getRandom(list) {
     return Math.floor(Math.random() * list.length);
 }
-},{}],11:[function(require,module,exports) {
-console.log('coucouuuu');
+},{}],24:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.player = undefined;
+exports.default = onYouTubeIframeAPIReady;
+exports.playVideo = playVideo;
+exports.pauseVideo = pauseVideo;
+exports.loadNextVideo = loadNextVideo;
+
+var _dataHandler = require('./data-handler');
+
+var player = exports.player = undefined;
+function onYouTubeIframeAPIReady() {
+  exports.player = player = new YT.Player('aoe-player', {
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      disablekb: 1,
+      hl: 'en',
+      cc_load_policy: 0,
+      fs: 0,
+      modestbranding: 1,
+      rel: 0,
+      showinfo: 0,
+      iv_load_policy: 3
+    },
+    height: '100%',
+    width: '100%',
+    events: {
+      onReady: function onReady() {
+        loadNextVideo();
+      }
+      // 'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+function playVideo() {
+  player.playVideo();
+}
+
+function pauseVideo() {
+  player.pauseVideo();
+}
+
+function loadNextVideo() {
+  var video = (0, _dataHandler.getNextVideo)();
+  player.loadVideoById(video.id);
+  return video;
+}
+},{"./data-handler":25}],26:[function(require,module,exports) {
+'use strict';
+
+var _ytLoader = require('./yt-loader');
 
 var playBtn = document.querySelector('#play');
 var pauseBtn = document.querySelector('#pause');
@@ -246,18 +276,24 @@ var nextBtn = document.querySelector('#next');
 var plusBtn = document.querySelector('#plus');
 
 playBtn.addEventListener('click', function () {
-  window.alert('the video is playing');
+  (0, _ytLoader.playVideo)();
 });
+
 pauseBtn.addEventListener('click', function () {
-  window.alert('the video is paused');
+  (0, _ytLoader.pauseVideo)();
 });
+
 nextBtn.addEventListener('click', function () {
-  window.alert('go to the next video');
+  var video = (0, _ytLoader.loadNextVideo)();
+  renderUI(video);
 });
-plusBtn.addEventListener('click', function () {
-  window.alert('show the infos');
-});
-},{}],2:[function(require,module,exports) {
+
+plusBtn.addEventListener('click', function () {});
+
+function renderUI(video) {
+  // update the ui
+}
+},{"./yt-loader":24}],11:[function(require,module,exports) {
 'use strict';
 
 require('../scss/reset.scss');
@@ -266,12 +302,18 @@ require('../scss/style.scss');
 
 require('./video-data');
 
-require('./yt-loader');
+var _ytLoader = require('./yt-loader');
+
+var _ytLoader2 = _interopRequireDefault(_ytLoader);
 
 require('./data-handler');
 
 require('./ui');
-},{"../scss/reset.scss":5,"../scss/style.scss":4,"./video-data":8,"./yt-loader":10,"./data-handler":9,"./ui":11}],37:[function(require,module,exports) {
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+window.onYouTubeIframeAPIReady = _ytLoader2.default;
+},{"../scss/reset.scss":20,"../scss/style.scss":21,"./video-data":23,"./yt-loader":24,"./data-handler":25,"./ui":26}],37:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -293,7 +335,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '65438' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55391' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -394,5 +436,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[37,2])
+},{}]},{},[37,11])
 //# sourceMappingURL=/dist/2609fea55a3e91c45b021e661febb047.map
