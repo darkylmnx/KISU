@@ -1,4 +1,4 @@
-var playlist = [
+window.playlist = [
   {
     "id": "CYPDjli1iRw",
     "anime": "One Punch Man",
@@ -32,7 +32,7 @@ var playlist = [
     "title": "Rolling Star",
     "author": "Yui",
     "type": "o",
-    "nb": "5"
+    "nb": "5",
     "category": "sn"
   },
   {
@@ -44,4 +44,5 @@ var playlist = [
     "nb": "1",
     "category": "se"
   }
-]
+];
+
