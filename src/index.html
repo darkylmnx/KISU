@@ -7,11 +7,7 @@
 <body>
   <header class="header">
     <img src="assets/imgs/logo.png" alt="kisu logo" class="header_logo">
-    <div class="header_menu">
-      <div class="header_menu_line"></div>
-      <div class="header_menu_line"></div>
-      <div class="header_menu_line"></div>
-    </div>
+    <img src="assets/imgs/burger.png" alt="" class="header_menu">
   </header>
   <section class="infos">
     <div class="infos_titleBox">
@@ -26,12 +22,19 @@
     </div>
   </section>
   <section class="player">
-    <button class="player_button" id="play">Play</button>
-    <button class="player_button" id="pause">Pause</button>
-    <button class="player_button" id="next">Next</button>
-    <button class="player_button" id="plus">Plus</button>
-  </section>
+    <div class="aoe-player_overlay"></div>
     <div id="aoe-player"></div>
+    <div class="player_buttons">
+      <button class="player_buttons_button" id="play"><img src="assets/imgs/mute.png" alt="mute button" class="player_buttons_button_img"></button>
+      <button class="player_buttons_button" id="play"><img src="assets/imgs/play.png" alt="play button" class="player_buttons_button_img"></button>
+      <button class="player_buttons_button" id="pause"><img src="assets/imgs/pause.png" alt="pause button" class="player_buttons_button_img"></button>
+      <button class="player_buttons_button" id="next"><img src="assets/imgs/next.png" alt="next button" class="player_buttons_button_img">
+      </button>
+      <button class="player_buttons_button" id="plus"><img src="assets/imgs/plus.png" alt="plus button" class="player_buttons_button_img"></button>
+    </div>
+
+  </section>
+
 
     <script>
         var tag = document.createElement('script');

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kisu</title>
+<link rel="stylesheet" href="/dist/2609fea55a3e91c45b021e661febb047.css"></head>
+<body>
+  <header class="header">
+    <img src="/dist/b6a9aee63f6ff59c370b219466f93912.png" alt="kisu logo" class="header_logo">
+    <img src="/dist/ed8a4870ebac08e7b861da6d3e42528a.png" alt="" class="header_menu">
+  </header>
+  <section class="infos">
+    <div class="infos_titleBox">
+      <h2 class="infos_titleBox_title">Title</h2>
+      <span class="infos_titleBox_type">ed</span>
+    </div>
+    <h3 class="infos_author">author</h3>
+    <div class="infos_tags">
+      <span class="infos_tags_tag" id="shonen">#shonen</span>
+      <span class="infos_tags_tag" id="action">#action</span>
+      <span class="infos_tags_tag" id="aventure">#aventure</span>
+    </div>
+  </section>
+  <section class="player">
+    <div class="aoe-player_overlay"></div>
+    <div id="aoe-player"></div>
+    <div class="player_buttons">
+      <button class="player_buttons_button" id="play"><img src="/dist/133732d72b575cc3ad94bd0c596ab40c.png" alt="mute button" class="player_buttons_button_img"></button>
+      <button class="player_buttons_button" id="play"><img src="/dist/91026140a6e0b059ebc498a523000308.png" alt="play button" class="player_buttons_button_img"></button>
+      <button class="player_buttons_button" id="pause"><img src="/dist/aadf9cb8f2d81658d702d965d84c1a3a.png" alt="pause button" class="player_buttons_button_img"></button>
+      <button class="player_buttons_button" id="next"><img src="/dist/509e1e17fdd7005ef75e57d5fcb1e28b.png" alt="next button" class="player_buttons_button_img">
+      </button>
+      <button class="player_buttons_button" id="plus"><img src="/dist/9644e48e63d0866f73f63e12071f5580.png" alt="plus button" class="player_buttons_button_img"></button>
+    </div>
+
+  </section>
+
+
+    <script>
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+    <script src="/dist/2609fea55a3e91c45b021e661febb047.js"></script>
+</body>
+</html>
