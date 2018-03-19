@@ -1,4 +1,4 @@
-console.log('coucouuuu');
+import { loadNextVideo, playVideo, pauseVideo } from './yt-loader';
 
 var playBtn = document.querySelector('#play');
 var pauseBtn = document.querySelector('#pause');
@@ -6,14 +6,22 @@ var nextBtn = document.querySelector('#next');
 var plusBtn = document.querySelector('#plus');
 
 playBtn.addEventListener('click', function() {
-  window.alert('the video is playing');
+  playVideo();
 });
+
 pauseBtn.addEventListener('click', function() {
-  window.alert('the video is paused');
+  pauseVideo();
 });
+
 nextBtn.addEventListener('click', function() {
-  window.alert('go to the next video');
+  var video = loadNextVideo();
+  renderUI(video);
 });
+
 plusBtn.addEventListener('click', function() {
-  window.alert('show the infos');
+
 });
+
+function renderUI(video) {
+    // update the ui
+}
