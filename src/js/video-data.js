@@ -1,4 +1,4 @@
-[
+var playlist = [
   {
     "id": "CYPDjli1iRw",
     "anime": "One Punch Man",
