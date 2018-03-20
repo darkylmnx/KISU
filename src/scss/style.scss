@@ -99,13 +99,74 @@ body {
 		left: 50%;
 		bottom: 30px;
 		transform: translate(-50%, 0);
+		opacity: 0.25;
+		transition: all 0.3s ease;
+		cursor: default;
+		&:hover {
+			opacity: 1;
+		}
 		&_button {
 			border: 0px;
 			background: rgba(0,0,0,0);
 			cursor: pointer;
-			&_img {
-				height: 30px;
-					width: auto;
+			width: 20px;
+			height: 20px;
+			margin: 0 10px;
+
+			background-size: 20px 20px;
+			&:nth-child(1) {
+				background: url('../assets/imgs/icons/mute.svg') no-repeat center;
+				background-size: 20px 20px;
+				transition: all 0.3s ease;
+				&:hover {
+					background: url('../assets/imgs/icons/mute-anim.svg') no-repeat center;
+					background-size: 20px 20px;
+				}
+			}
+			&:nth-child(2) {
+				background: url('../assets/imgs/icons/play.svg') no-repeat center;
+				background-size: 20px 20px;
+				transition: all 0.3s ease;
+				&:hover {
+					background: url('../assets/imgs/icons/play-anim.svg') no-repeat center;
+					background-size: 20px 20px;
+				}
+			}
+			&:nth-child(3) {
+				background: url('../assets/imgs/icons/pause.svg') no-repeat center;
+				background-size: 20px 20px;
+				transition: all 0.3s ease;
+				&:hover {
+					background: url('../assets/imgs/icons/pause-anim.svg') no-repeat center;
+					background-size: 20px 20px;
+				}
+			}
+			&:nth-child(4) {
+				background: url('../assets/imgs/icons/previous.svg') no-repeat center;
+				background-size: 20px 20px;
+				transition: all 0.3s ease;
+				&:hover {
+					background: url('../assets/imgs/icons/previous-anim.svg') no-repeat center;
+					background-size: 20px 20px;
+				}
+			}
+			&:nth-child(5) {
+				background: url('../assets/imgs/icons/next.svg') no-repeat center;
+				background-size: 20px 20px;
+				transition: all 0.3s ease;
+				&:hover {
+					background: url('../assets/imgs/icons/next-anim.svg') no-repeat center;
+					background-size: 20px 20px;
+				}
+			}
+			&:nth-child(6) {
+				background: url('../assets/imgs/icons/plus.svg') no-repeat center;
+				background-size: 20px 20px;
+				transition: all 0.3s ease;
+				&:hover {
+					background: url('../assets/imgs/icons/plus-anim.svg') no-repeat center;
+					background-size: 20px 20px;
+				}
 			}
 		}
 	}

@@ -117,14 +117,62 @@ body {
     z-index: 2;
     left: 50%;
     bottom: 30px;
-    transform: translate(-50%, 0); }
+    transform: translate(-50%, 0);
+    opacity: 0.25;
+    transition: all 0.3s ease;
+    cursor: default; }
+    .player_buttons:hover {
+      opacity: 1; }
     .player_buttons_button {
       border: 0px;
       background: transparent;
-      cursor: pointer; }
-      .player_buttons_button_img {
-        height: 30px;
-        width: auto; }
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      margin: 0 10px;
+      background-size: 20px 20px; }
+      .player_buttons_button:nth-child(1) {
+        background: url("5a248f73ce42b6796ba171b4099511f5.svg") no-repeat center;
+        background-size: 20px 20px;
+        transition: all 0.3s ease; }
+        .player_buttons_button:nth-child(1):hover {
+          background: url("a6f6a587829d1e9b2300c41d162ef952.svg") no-repeat center;
+          background-size: 20px 20px; }
+      .player_buttons_button:nth-child(2) {
+        background: url("8913082a2ee02c273702bd3bf69c3d99.svg") no-repeat center;
+        background-size: 20px 20px;
+        transition: all 0.3s ease; }
+        .player_buttons_button:nth-child(2):hover {
+          background: url("af9dd4a928e8c2f6efeb687759af4d46.svg") no-repeat center;
+          background-size: 20px 20px; }
+      .player_buttons_button:nth-child(3) {
+        background: url("2793cdce3945b5728e02350737621daf.svg") no-repeat center;
+        background-size: 20px 20px;
+        transition: all 0.3s ease; }
+        .player_buttons_button:nth-child(3):hover {
+          background: url("57f6c3df14d42a363ae0bb93d4adbf30.svg") no-repeat center;
+          background-size: 20px 20px; }
+      .player_buttons_button:nth-child(4) {
+        background: url("960857f29fe085bfce3dff4f769cbb20.svg") no-repeat center;
+        background-size: 20px 20px;
+        transition: all 0.3s ease; }
+        .player_buttons_button:nth-child(4):hover {
+          background: url("f70fac7c4bc8398d08f2301bf849749e.svg") no-repeat center;
+          background-size: 20px 20px; }
+      .player_buttons_button:nth-child(5) {
+        background: url("7a41941fab1081d40e9476a24c4ad120.svg") no-repeat center;
+        background-size: 20px 20px;
+        transition: all 0.3s ease; }
+        .player_buttons_button:nth-child(5):hover {
+          background: url("d8ed1cc540b765160bb6c735c1d6fc34.svg") no-repeat center;
+          background-size: 20px 20px; }
+      .player_buttons_button:nth-child(6) {
+        background: url("4057d24e22e62fe683448fcd7c687a2c.svg") no-repeat center;
+        background-size: 20px 20px;
+        transition: all 0.3s ease; }
+        .player_buttons_button:nth-child(6):hover {
+          background: url("c0131a93c56f6c9d47b0f8ecd3300c4b.svg") no-repeat center;
+          background-size: 20px 20px; }
 
 .aoe-player {
   width: 100%;
