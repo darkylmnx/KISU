@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({13:[function(require,module,exports) {
+})({28:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -132,19 +132,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":13}],5:[function(require,module,exports) {
+},{"./bundle-url":28}],6:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":12}],6:[function(require,module,exports) {
+},{"_css_loader":12}],7:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/fonts/Lato-Regular.ttf":[["7ad393b83d7ff2e0ada77c291832b226.ttf",29],29],"./../assets/fonts/Farsan-Regular.ttf":[["f32975e31bc36044c9831acb66c9c5a1.ttf",30],30],"./../assets/imgs/bg.jpg":[["83239aae8d1630e5bb71a4298c0dcb30.jpg",31],31],"./../assets/imgs/icons/mute.svg":[["5a248f73ce42b6796ba171b4099511f5.svg",32],32],"./../assets/imgs/icons/mute-anim.svg":[["a6f6a587829d1e9b2300c41d162ef952.svg",33],33],"./../assets/imgs/icons/play.svg":[["8913082a2ee02c273702bd3bf69c3d99.svg",34],34],"./../assets/imgs/icons/play-anim.svg":[["af9dd4a928e8c2f6efeb687759af4d46.svg",35],35],"./../assets/imgs/icons/pause.svg":[["2793cdce3945b5728e02350737621daf.svg",36],36],"./../assets/imgs/icons/pause-anim.svg":[["57f6c3df14d42a363ae0bb93d4adbf30.svg",37],37],"./../assets/imgs/icons/previous.svg":[["960857f29fe085bfce3dff4f769cbb20.svg",38],38],"./../assets/imgs/icons/previous-anim.svg":[["f70fac7c4bc8398d08f2301bf849749e.svg",39],39],"./../assets/imgs/icons/next.svg":[["7a41941fab1081d40e9476a24c4ad120.svg",40],40],"./../assets/imgs/icons/next-anim.svg":[["d8ed1cc540b765160bb6c735c1d6fc34.svg",41],41],"./../assets/imgs/icons/plus.svg":[["4057d24e22e62fe683448fcd7c687a2c.svg",42],42],"./../assets/imgs/icons/plus-anim.svg":[["c0131a93c56f6c9d47b0f8ecd3300c4b.svg",43],43],"_css_loader":12}],9:[function(require,module,exports) {
+},{"./../assets/fonts/Lato-Regular.ttf":[["7ad393b83d7ff2e0ada77c291832b226.ttf",13],13],"./../assets/fonts/Farsan-Regular.ttf":[["f32975e31bc36044c9831acb66c9c5a1.ttf",14],14],"./../assets/imgs/bg.jpg":[["83239aae8d1630e5bb71a4298c0dcb30.jpg",15],15],"./../assets/imgs/icons/unmute.svg":[["154b3096e9c94964c76cb59888e751bd.svg",16],16],"./../assets/imgs/icons/unmute-anim.svg":[["08cf5e902bd6653ba23fedad07229e97.svg",17],17],"./../assets/imgs/icons/mute.svg":[["5a248f73ce42b6796ba171b4099511f5.svg",36],36],"./../assets/imgs/icons/mute-anim.svg":[["a6f6a587829d1e9b2300c41d162ef952.svg",37],37],"./../assets/imgs/icons/play.svg":[["8913082a2ee02c273702bd3bf69c3d99.svg",18],18],"./../assets/imgs/icons/play-anim.svg":[["af9dd4a928e8c2f6efeb687759af4d46.svg",19],19],"./../assets/imgs/icons/pause.svg":[["2793cdce3945b5728e02350737621daf.svg",20],20],"./../assets/imgs/icons/pause-anim.svg":[["57f6c3df14d42a363ae0bb93d4adbf30.svg",21],21],"./../assets/imgs/icons/previous.svg":[["960857f29fe085bfce3dff4f769cbb20.svg",22],22],"./../assets/imgs/icons/previous-anim.svg":[["f70fac7c4bc8398d08f2301bf849749e.svg",23],23],"./../assets/imgs/icons/next.svg":[["7a41941fab1081d40e9476a24c4ad120.svg",24],24],"./../assets/imgs/icons/next-anim.svg":[["d8ed1cc540b765160bb6c735c1d6fc34.svg",25],25],"./../assets/imgs/icons/plus.svg":[["4057d24e22e62fe683448fcd7c687a2c.svg",26],26],"./../assets/imgs/icons/plus-anim.svg":[["c0131a93c56f6c9d47b0f8ecd3300c4b.svg",27],27],"_css_loader":12}],8:[function(require,module,exports) {
 window.playlist = [{
   "id": "CYPDjli1iRw",
   "anime": "One Punch Man",
@@ -212,7 +212,7 @@ function getNextVideo() {
 function getRandom(list) {
     return Math.floor(Math.random() * list.length);
 }
-},{}],8:[function(require,module,exports) {
+},{}],9:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -220,9 +220,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.player = undefined;
 exports.default = onYouTubeIframeAPIReady;
+exports.muteVideo = muteVideo;
 exports.playVideo = playVideo;
 exports.pauseVideo = pauseVideo;
-exports.muteVideo = muteVideo;
 exports.loadNextVideo = loadNextVideo;
 
 var _dataHandler = require('./data-handler');
@@ -253,16 +253,16 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
+function muteVideo() {
+  player.muteVideo();
+}
+
 function playVideo() {
   player.playVideo();
 }
 
 function pauseVideo() {
   player.pauseVideo();
-}
-
-function muteVideo() {
-  player.muteVideo();
 }
 
 function loadNextVideo() {
@@ -277,13 +277,30 @@ var _ytLoader = require('./yt-loader');
 
 // PLAYER BUTTONS ---------------------
 var muteBtn = document.querySelector('#mute');
+var unmuteBtn = document.querySelector('#unmute');
 var playBtn = document.querySelector('#play');
 var pauseBtn = document.querySelector('#pause');
 var nextBtn = document.querySelector('#next');
 var plusBtn = document.querySelector('#plus');
 
 muteBtn.addEventListener('click', function () {
-  muteVideo();
+  muteBtn.classList.toggle('is-active');
+  unmuteBtn.classList.toggle('is-active');
+});
+unmuteBtn.addEventListener('click', function () {
+  muteBtn.classList.toggle('is-active');
+  unmuteBtn.classList.toggle('is-active');
+});
+muteBtn.addEventListener('click', function () {});
+unmuteBtn.addEventListener('click', function () {});
+
+playBtn.addEventListener('click', function () {
+  playBtn.classList.toggle('is-active');
+  pauseBtn.classList.toggle('is-active');
+});
+pauseBtn.addEventListener('click', function () {
+  playBtn.classList.toggle('is-active');
+  pauseBtn.classList.toggle('is-active');
 });
 playBtn.addEventListener('click', function () {
   (0, _ytLoader.playVideo)();
@@ -307,14 +324,14 @@ function changeBurger() {
 var burger = document.querySelector('.header_menu');
 var search = document.querySelector('.search');
 burger.addEventListener('click', function () {
-  search.classList.toggle('is-active');
+  search.classList.toggle('not-hidden');
   changeBurger();
 });
 
 function renderUI(video) {
   // update the ui
 }
-},{"./yt-loader":8}],2:[function(require,module,exports) {
+},{"./yt-loader":9}],2:[function(require,module,exports) {
 'use strict';
 
 require('../scss/reset.scss');
@@ -334,7 +351,7 @@ require('./ui');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.onYouTubeIframeAPIReady = _ytLoader2.default;
-},{"../scss/reset.scss":5,"../scss/style.scss":6,"./video-data":9,"./yt-loader":8,"./data-handler":10,"./ui":11}],55:[function(require,module,exports) {
+},{"../scss/reset.scss":6,"../scss/style.scss":7,"./video-data":8,"./yt-loader":9,"./data-handler":10,"./ui":11}],45:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -356,7 +373,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54204' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61266' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -457,5 +474,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[55,2])
+},{}]},{},[45,2])
 //# sourceMappingURL=/dist/2609fea55a3e91c45b021e661febb047.map

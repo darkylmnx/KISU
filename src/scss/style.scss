@@ -33,6 +33,9 @@ button:focus {
 	outline: 0;
 }
 .is-active {
+	display: inline-block !important;
+}
+.not-hidden {
 	right: 0px !important;
 }
 .disappear {
@@ -55,10 +58,20 @@ button:focus {
   align-items: center;
 	position: absolute;
 	z-index: 2;
-  &_logo {
-    width: 150px;
-    height: auto;
-  }
+	padding: 0 30px 0 20px;
+	&_title {
+		display: flex;
+	  align-items: center;
+		&_icon {
+			width: 60px;
+	    height: 60px;
+		}
+		&_logo {
+	    width: 100px;
+	    height: 100px;
+	  }
+	}
+
   &_menu {
 		width: 40px;
 		height: 20px;
@@ -70,7 +83,7 @@ button:focus {
 		}
 		&:before {
 			content: '';
-			background: rgba(0,0,0,0.5);
+			background: rgba(255,255,255,0.5);
 			width: 60px;
 			height: 60px;
 			border-radius: 100%;
@@ -155,85 +168,106 @@ button:focus {
 	position: absolute;
 	top: 0;
 	left: 0;
-	&_buttons {
-		background: rgba(0,0,0,0.75);
-		padding: 10px 25px;
-		border-radius: 15px;
+	&_buttonsBox {
+		display: flex;
+
 		position: absolute;
-		z-index: 2;
+		z-index: 5;
 		left: 50%;
 		bottom: 30px;
 		transform: translate(-50%, 0);
-		opacity: 0.25;
-		transition: all 0.3s ease;
-		cursor: default;
-		&:hover {
+		&:hover > .player_buttonsBox_buttons {
 			opacity: 1;
 		}
-		&_button {
-			border: 0px;
-			background: rgba(0,0,0,0);
-			cursor: pointer;
-			width: 20px;
-			height: 20px;
-			margin: 0 10px;
+		&_buttons {
+			background: rgba(0,0,0,0.75);
+			padding: 10px;
+			margin: 5px;
+			border-radius: 50px;
+			opacity: 0.25;
+			transition: all 0.3s ease;
+			cursor: default;
 
-			background-size: 20px 20px;
-			&:nth-child(1) {
-				background: url('../assets/imgs/icons/mute.svg') no-repeat center;
+			&_button {
+				border: 0px;
+				background: rgba(0,0,0,0);
+				cursor: pointer;
+				width: 20px;
+				height: 20px;
+				margin: 0 10px;
+
 				background-size: 20px 20px;
-				transition: all 0.3s ease;
-				&:hover {
-					background: url('../assets/imgs/icons/mute-anim.svg') no-repeat center;
-					background-size: 20px 20px;
-				}
-			}
-			&:nth-child(2) {
-				background: url('../assets/imgs/icons/play.svg') no-repeat center;
-				background-size: 20px 20px;
-				transition: all 0.3s ease;
-				&:hover {
-					background: url('../assets/imgs/icons/play-anim.svg') no-repeat center;
-					background-size: 20px 20px;
-				}
-			}
-			&:nth-child(3) {
-				background: url('../assets/imgs/icons/pause.svg') no-repeat center;
-				background-size: 20px 20px;
-				transition: all 0.3s ease;
-				&:hover {
-					background: url('../assets/imgs/icons/pause-anim.svg') no-repeat center;
-					background-size: 20px 20px;
-				}
-			}
-			&:nth-child(4) {
-				background: url('../assets/imgs/icons/previous.svg') no-repeat center;
-				background-size: 20px 20px;
-				transition: all 0.3s ease;
-				&:hover {
-					background: url('../assets/imgs/icons/previous-anim.svg') no-repeat center;
-					background-size: 20px 20px;
-				}
-			}
-			&:nth-child(5) {
-				background: url('../assets/imgs/icons/next.svg') no-repeat center;
-				background-size: 20px 20px;
-				transition: all 0.3s ease;
-				&:hover {
-					background: url('../assets/imgs/icons/next-anim.svg') no-repeat center;
-					background-size: 20px 20px;
-				}
-			}
-			&:nth-child(6) {
-				background: url('../assets/imgs/icons/plus.svg') no-repeat center;
-				background-size: 20px 20px;
-				transition: all 0.3s ease;
-				&:hover {
-					background: url('../assets/imgs/icons/plus-anim.svg') no-repeat center;
-					background-size: 20px 20px;
-				}
+
 			}
 		}
+	}
+
+}
+#mute {
+	background: url('../assets/imgs/icons/unmute.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	display: none;
+	&:hover {
+		background: url('../assets/imgs/icons/unmute-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#unmute {
+	background: url('../assets/imgs/icons/mute.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	display: none;
+	&:hover {
+		background: url('../assets/imgs/icons/mute-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#play {
+	background: url('../assets/imgs/icons/play.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	display: none;
+	&:hover {
+		background: url('../assets/imgs/icons/play-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#pause {
+	background: url('../assets/imgs/icons/pause.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	display: none;
+	&:hover {
+		background: url('../assets/imgs/icons/pause-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#previous {
+	background: url('../assets/imgs/icons/previous.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	&:hover {
+		background: url('../assets/imgs/icons/previous-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#next {
+	background: url('../assets/imgs/icons/next.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	&:hover {
+		background: url('../assets/imgs/icons/next-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#plus {
+	background: url('../assets/imgs/icons/plus.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	&:hover {
+		background: url('../assets/imgs/icons/plus-anim.svg') no-repeat center;
+		background-size: 20px 20px;
 	}
 }
 

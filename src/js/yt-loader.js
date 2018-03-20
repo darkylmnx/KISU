@@ -26,6 +26,10 @@ export default function onYouTubeIframeAPIReady() {
   });
 }
 
+export function muteVideo(){
+  player.muteVideo();
+}
+
 export function playVideo(){
   player.playVideo();
 }
@@ -34,9 +38,7 @@ export function pauseVideo(){
   player.pauseVideo();
 }
 
-export function muteVideo(){
-  player.muteVideo();
-}
+
 
 export function loadNextVideo() {
   var video = getNextVideo();

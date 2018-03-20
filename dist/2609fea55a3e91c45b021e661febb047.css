@@ -61,6 +61,9 @@ button:focus {
   outline: 0; }
 
 .is-active {
+  display: inline-block !important; }
+
+.not-hidden {
   right: 0px !important; }
 
 .disappear {
@@ -81,10 +84,17 @@ button:focus {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  z-index: 2; }
-  .header_logo {
-    width: 150px;
-    height: auto; }
+  z-index: 2;
+  padding: 0 30px 0 20px; }
+  .header_title {
+    display: flex;
+    align-items: center; }
+    .header_title_icon {
+      width: 60px;
+      height: 60px; }
+    .header_title_logo {
+      width: 100px;
+      height: 100px; }
   .header_menu {
     width: 40px;
     height: 20px;
@@ -95,7 +105,7 @@ button:focus {
       background: #FF4A4A; }
     .header_menu:before {
       content: '';
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(255, 255, 255, 0.5);
       width: 60px;
       height: 60px;
       border-radius: 100%;
@@ -162,70 +172,91 @@ button:focus {
   position: absolute;
   top: 0;
   left: 0; }
-  .player_buttons {
-    background: rgba(0, 0, 0, 0.75);
-    padding: 10px 25px;
-    border-radius: 15px;
+  .player_buttonsBox {
+    display: flex;
     position: absolute;
-    z-index: 2;
+    z-index: 5;
     left: 50%;
     bottom: 30px;
-    transform: translate(-50%, 0);
-    opacity: 0.25;
-    transition: all 0.3s ease;
-    cursor: default; }
-    .player_buttons:hover {
+    transform: translate(-50%, 0); }
+    .player_buttonsBox:hover > .player_buttonsBox_buttons {
       opacity: 1; }
-    .player_buttons_button {
-      border: 0px;
-      background: transparent;
-      cursor: pointer;
-      width: 20px;
-      height: 20px;
-      margin: 0 10px;
-      background-size: 20px 20px; }
-      .player_buttons_button:nth-child(1) {
-        background: url("5a248f73ce42b6796ba171b4099511f5.svg") no-repeat center;
-        background-size: 20px 20px;
-        transition: all 0.3s ease; }
-        .player_buttons_button:nth-child(1):hover {
-          background: url("a6f6a587829d1e9b2300c41d162ef952.svg") no-repeat center;
-          background-size: 20px 20px; }
-      .player_buttons_button:nth-child(2) {
-        background: url("8913082a2ee02c273702bd3bf69c3d99.svg") no-repeat center;
-        background-size: 20px 20px;
-        transition: all 0.3s ease; }
-        .player_buttons_button:nth-child(2):hover {
-          background: url("af9dd4a928e8c2f6efeb687759af4d46.svg") no-repeat center;
-          background-size: 20px 20px; }
-      .player_buttons_button:nth-child(3) {
-        background: url("2793cdce3945b5728e02350737621daf.svg") no-repeat center;
-        background-size: 20px 20px;
-        transition: all 0.3s ease; }
-        .player_buttons_button:nth-child(3):hover {
-          background: url("57f6c3df14d42a363ae0bb93d4adbf30.svg") no-repeat center;
-          background-size: 20px 20px; }
-      .player_buttons_button:nth-child(4) {
-        background: url("960857f29fe085bfce3dff4f769cbb20.svg") no-repeat center;
-        background-size: 20px 20px;
-        transition: all 0.3s ease; }
-        .player_buttons_button:nth-child(4):hover {
-          background: url("f70fac7c4bc8398d08f2301bf849749e.svg") no-repeat center;
-          background-size: 20px 20px; }
-      .player_buttons_button:nth-child(5) {
-        background: url("7a41941fab1081d40e9476a24c4ad120.svg") no-repeat center;
-        background-size: 20px 20px;
-        transition: all 0.3s ease; }
-        .player_buttons_button:nth-child(5):hover {
-          background: url("d8ed1cc540b765160bb6c735c1d6fc34.svg") no-repeat center;
-          background-size: 20px 20px; }
-      .player_buttons_button:nth-child(6) {
-        background: url("4057d24e22e62fe683448fcd7c687a2c.svg") no-repeat center;
-        background-size: 20px 20px;
-        transition: all 0.3s ease; }
-        .player_buttons_button:nth-child(6):hover {
-          background: url("c0131a93c56f6c9d47b0f8ecd3300c4b.svg") no-repeat center;
-          background-size: 20px 20px; }
+    .player_buttonsBox_buttons {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 10px;
+      margin: 5px;
+      border-radius: 50px;
+      opacity: 0.25;
+      transition: all 0.3s ease;
+      cursor: default; }
+      .player_buttonsBox_buttons_button {
+        border: 0px;
+        background: transparent;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        margin: 0 10px;
+        background-size: 20px 20px; }
+
+#mute {
+  background: url("154b3096e9c94964c76cb59888e751bd.svg") no-repeat center;
+  background-size: 20px 20px;
+  transition: all 0.3s ease;
+  display: none; }
+  #mute:hover {
+    background: url("08cf5e902bd6653ba23fedad07229e97.svg") no-repeat center;
+    background-size: 20px 20px; }
+
+#unmute {
+  background: url("5a248f73ce42b6796ba171b4099511f5.svg") no-repeat center;
+  background-size: 20px 20px;
+  transition: all 0.3s ease;
+  display: none; }
+  #unmute:hover {
+    background: url("a6f6a587829d1e9b2300c41d162ef952.svg") no-repeat center;
+    background-size: 20px 20px; }
+
+#play {
+  background: url("8913082a2ee02c273702bd3bf69c3d99.svg") no-repeat center;
+  background-size: 20px 20px;
+  transition: all 0.3s ease;
+  display: none; }
+  #play:hover {
+    background: url("af9dd4a928e8c2f6efeb687759af4d46.svg") no-repeat center;
+    background-size: 20px 20px; }
+
+#pause {
+  background: url("2793cdce3945b5728e02350737621daf.svg") no-repeat center;
+  background-size: 20px 20px;
+  transition: all 0.3s ease;
+  display: none; }
+  #pause:hover {
+    background: url("57f6c3df14d42a363ae0bb93d4adbf30.svg") no-repeat center;
+    background-size: 20px 20px; }
+
+#previous {
+  background: url("960857f29fe085bfce3dff4f769cbb20.svg") no-repeat center;
+  background-size: 20px 20px;
+  transition: all 0.3s ease; }
+  #previous:hover {
+    background: url("f70fac7c4bc8398d08f2301bf849749e.svg") no-repeat center;
+    background-size: 20px 20px; }
+
+#next {
+  background: url("7a41941fab1081d40e9476a24c4ad120.svg") no-repeat center;
+  background-size: 20px 20px;
+  transition: all 0.3s ease; }
+  #next:hover {
+    background: url("d8ed1cc540b765160bb6c735c1d6fc34.svg") no-repeat center;
+    background-size: 20px 20px; }
+
+#plus {
+  background: url("4057d24e22e62fe683448fcd7c687a2c.svg") no-repeat center;
+  background-size: 20px 20px;
+  transition: all 0.3s ease; }
+  #plus:hover {
+    background: url("c0131a93c56f6c9d47b0f8ecd3300c4b.svg") no-repeat center;
+    background-size: 20px 20px; }
 
 .search {
   background: #3F0000;

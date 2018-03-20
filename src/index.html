@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/imgs/icons/icon.png" />
     <title>kisu</title>
 </head>
 <body>
   <header class="header">
-    <img src="assets/imgs/icons/logo.svg" alt="kisu logo" class="header_logo">
+    <div class="header_title">
+      <img src="assets/imgs/icons/icon.svg" alt="kisu logo" class="header_title_icon">
+      <img src="assets/imgs/icons/logo.svg" alt="kisu logo" class="header_title_logo">
+    </div>
     <div src="assets/imgs/burger.png" alt="" class="header_menu">
       <div class="header_menu_line"></div>
       <div class="header_menu_line"></div>
@@ -28,13 +32,18 @@
   <section class="player">
     <div class="aoe-player_overlay"></div>
     <div id="aoe-player"></div>
-    <div class="player_buttons">
-      <button class="player_buttons_button" id="mute"></button>
-      <button class="player_buttons_button" id="play"></button>
-      <button class="player_buttons_button" id="pause"></button>
-      <button class="player_buttons_button" id="previous"></button>
-      <button class="player_buttons_button" id="next"></button>
-      <button class="player_buttons_button" id="plus"></button>
+    <div class="player_buttonsBox">
+      <div class="player_buttonsBox_buttons">
+        <button class="player_buttonsBox_buttons_button is-active" id="mute"></button>
+        <button class="player_buttonsBox_buttons_button" id="unmute"></button>
+        <button class="player_buttonsBox_buttons_button" id="play"></button>
+        <button class="player_buttonsBox_buttons_button is-active" id="pause"></button>
+        <button class="player_buttonsBox_buttons_button" id="previous"></button>
+        <button class="player_buttonsBox_buttons_button" id="next"></button>
+      </div>
+      <div class="player_buttonsBox_buttons">
+        <button class="player_buttonsBox_buttons_button" id="plus"></button>
+      </div>
     </div>
 
   </section>
