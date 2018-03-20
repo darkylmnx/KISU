@@ -34,6 +34,10 @@ export function pauseVideo(){
   player.pauseVideo();
 }
 
+export function muteVideo(){
+  player.muteVideo();
+}
+
 export function loadNextVideo() {
   var video = getNextVideo();
   player.loadVideoById(video.id);

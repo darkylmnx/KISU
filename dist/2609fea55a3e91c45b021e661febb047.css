@@ -53,8 +53,26 @@ table {
   src: url("f32975e31bc36044c9831acb66c9c5a1.ttf"); }
 
 body {
-  background: lightcyan;
-  font-size: 62.5%; }
+  background: #000;
+  font-size: 62.5%;
+  overflow: hidden; }
+
+button:focus {
+  outline: 0; }
+
+.is-active {
+  right: 0px !important; }
+
+.disappear {
+  opacity: 0; }
+
+.rotate {
+  top: 50% !important;
+  transform: translate(0, -50%) rotate(135deg); }
+
+.invRotate {
+  top: 50% !important;
+  transform: translate(0, -50%) rotate(-135deg); }
 
 .header {
   width: 100%;
@@ -68,8 +86,41 @@ body {
     width: 150px;
     height: auto; }
   .header_menu {
-    margin: 0 30px;
-    cursor: pointer; }
+    width: 40px;
+    height: 20px;
+    margin: 0 50px;
+    cursor: pointer;
+    position: relative; }
+    .header_menu:hover > .header_menu_line {
+      background: #FF4A4A; }
+    .header_menu:before {
+      content: '';
+      background: rgba(0, 0, 0, 0.5);
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: all 0.3s ease; }
+    .header_menu:hover:before {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1); }
+    .header_menu_line {
+      background: #fff;
+      width: 40px;
+      height: 2px;
+      position: absolute;
+      transition: all 0.3s ease; }
+      .header_menu_line:nth-child(1) {
+        top: 0; }
+      .header_menu_line:nth-child(2) {
+        top: 50%;
+        transform: translate(0, -50%); }
+      .header_menu_line:nth-child(3) {
+        bottom: 0; }
 
 .infos {
   position: absolute;
@@ -80,6 +131,7 @@ body {
     display: flex;
     align-items: flex-end; }
     .infos_titleBox_title {
+      color: #fff;
       font-family: "Lato-Regular";
       font-size: 3rem; }
     .infos_titleBox_type {
@@ -90,6 +142,7 @@ body {
       font-family: "Lato-Regular";
       font-size: 1rem; }
   .infos_author {
+    color: #fff;
     text-transform: uppercase;
     margin: 5px 0 15px 0;
     font-family: "Lato-Regular";
@@ -173,6 +226,14 @@ body {
         .player_buttons_button:nth-child(6):hover {
           background: url("c0131a93c56f6c9d47b0f8ecd3300c4b.svg") no-repeat center;
           background-size: 20px 20px; }
+
+.search {
+  background: #3F0000;
+  width: 300px;
+  height: 100vh;
+  position: absolute;
+  right: -300px;
+  transition: all 0.5s ease-out; }
 
 .aoe-player {
   width: 100%;

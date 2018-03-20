@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({20:[function(require,module,exports) {
+})({13:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],16:[function(require,module,exports) {
+},{}],12:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,19 +132,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":20}],10:[function(require,module,exports) {
+},{"./bundle-url":13}],5:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":16}],11:[function(require,module,exports) {
+},{"_css_loader":12}],6:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/fonts/Lato-Regular.ttf":[["7ad393b83d7ff2e0ada77c291832b226.ttf",17],17],"./../assets/fonts/Farsan-Regular.ttf":[["f32975e31bc36044c9831acb66c9c5a1.ttf",18],18],"./../assets/imgs/bg.jpg":[["83239aae8d1630e5bb71a4298c0dcb30.jpg",19],19],"./../assets/imgs/icons/mute.svg":[["5a248f73ce42b6796ba171b4099511f5.svg",6],6],"./../assets/imgs/icons/mute-anim.svg":[["a6f6a587829d1e9b2300c41d162ef952.svg",27],27],"./../assets/imgs/icons/play.svg":[["8913082a2ee02c273702bd3bf69c3d99.svg",5],5],"./../assets/imgs/icons/play-anim.svg":[["af9dd4a928e8c2f6efeb687759af4d46.svg",30],30],"./../assets/imgs/icons/pause.svg":[["2793cdce3945b5728e02350737621daf.svg",7],7],"./../assets/imgs/icons/pause-anim.svg":[["57f6c3df14d42a363ae0bb93d4adbf30.svg",31],31],"./../assets/imgs/icons/previous.svg":[["960857f29fe085bfce3dff4f769cbb20.svg",29],29],"./../assets/imgs/icons/previous-anim.svg":[["f70fac7c4bc8398d08f2301bf849749e.svg",32],32],"./../assets/imgs/icons/next.svg":[["7a41941fab1081d40e9476a24c4ad120.svg",8],8],"./../assets/imgs/icons/next-anim.svg":[["d8ed1cc540b765160bb6c735c1d6fc34.svg",33],33],"./../assets/imgs/icons/plus.svg":[["4057d24e22e62fe683448fcd7c687a2c.svg",9],9],"./../assets/imgs/icons/plus-anim.svg":[["c0131a93c56f6c9d47b0f8ecd3300c4b.svg",34],34],"_css_loader":16}],12:[function(require,module,exports) {
+},{"./../assets/fonts/Lato-Regular.ttf":[["7ad393b83d7ff2e0ada77c291832b226.ttf",29],29],"./../assets/fonts/Farsan-Regular.ttf":[["f32975e31bc36044c9831acb66c9c5a1.ttf",30],30],"./../assets/imgs/bg.jpg":[["83239aae8d1630e5bb71a4298c0dcb30.jpg",31],31],"./../assets/imgs/icons/mute.svg":[["5a248f73ce42b6796ba171b4099511f5.svg",32],32],"./../assets/imgs/icons/mute-anim.svg":[["a6f6a587829d1e9b2300c41d162ef952.svg",33],33],"./../assets/imgs/icons/play.svg":[["8913082a2ee02c273702bd3bf69c3d99.svg",34],34],"./../assets/imgs/icons/play-anim.svg":[["af9dd4a928e8c2f6efeb687759af4d46.svg",35],35],"./../assets/imgs/icons/pause.svg":[["2793cdce3945b5728e02350737621daf.svg",36],36],"./../assets/imgs/icons/pause-anim.svg":[["57f6c3df14d42a363ae0bb93d4adbf30.svg",37],37],"./../assets/imgs/icons/previous.svg":[["960857f29fe085bfce3dff4f769cbb20.svg",38],38],"./../assets/imgs/icons/previous-anim.svg":[["f70fac7c4bc8398d08f2301bf849749e.svg",39],39],"./../assets/imgs/icons/next.svg":[["7a41941fab1081d40e9476a24c4ad120.svg",40],40],"./../assets/imgs/icons/next-anim.svg":[["d8ed1cc540b765160bb6c735c1d6fc34.svg",41],41],"./../assets/imgs/icons/plus.svg":[["4057d24e22e62fe683448fcd7c687a2c.svg",42],42],"./../assets/imgs/icons/plus-anim.svg":[["c0131a93c56f6c9d47b0f8ecd3300c4b.svg",43],43],"_css_loader":12}],9:[function(require,module,exports) {
 window.playlist = [{
   "id": "CYPDjli1iRw",
   "anime": "One Punch Man",
@@ -186,7 +186,7 @@ window.playlist = [{
   "nb": "1",
   "category": "se"
 }];
-},{}],14:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -212,7 +212,7 @@ function getNextVideo() {
 function getRandom(list) {
     return Math.floor(Math.random() * list.length);
 }
-},{}],13:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -222,6 +222,7 @@ exports.player = undefined;
 exports.default = onYouTubeIframeAPIReady;
 exports.playVideo = playVideo;
 exports.pauseVideo = pauseVideo;
+exports.muteVideo = muteVideo;
 exports.loadNextVideo = loadNextVideo;
 
 var _dataHandler = require('./data-handler');
@@ -260,40 +261,60 @@ function pauseVideo() {
   player.pauseVideo();
 }
 
+function muteVideo() {
+  player.muteVideo();
+}
+
 function loadNextVideo() {
   var video = (0, _dataHandler.getNextVideo)();
   player.loadVideoById(video.id);
   return video;
 }
-},{"./data-handler":14}],15:[function(require,module,exports) {
+},{"./data-handler":10}],11:[function(require,module,exports) {
 'use strict';
 
 var _ytLoader = require('./yt-loader');
 
+// PLAYER BUTTONS ---------------------
+var muteBtn = document.querySelector('#mute');
 var playBtn = document.querySelector('#play');
 var pauseBtn = document.querySelector('#pause');
 var nextBtn = document.querySelector('#next');
 var plusBtn = document.querySelector('#plus');
 
+muteBtn.addEventListener('click', function () {
+  muteVideo();
+});
 playBtn.addEventListener('click', function () {
   (0, _ytLoader.playVideo)();
 });
-
 pauseBtn.addEventListener('click', function () {
   (0, _ytLoader.pauseVideo)();
 });
-
 nextBtn.addEventListener('click', function () {
   var video = (0, _ytLoader.loadNextVideo)();
   renderUI(video);
 });
-
 plusBtn.addEventListener('click', function () {});
+
+// SEARCH -----------------------------
+function changeBurger() {
+  var lines = document.querySelectorAll('.header_menu_line');
+  lines[0].classList.toggle('rotate');
+  lines[1].classList.toggle('disappear');
+  lines[2].classList.toggle('invRotate');
+}
+var burger = document.querySelector('.header_menu');
+var search = document.querySelector('.search');
+burger.addEventListener('click', function () {
+  search.classList.toggle('is-active');
+  changeBurger();
+});
 
 function renderUI(video) {
   // update the ui
 }
-},{"./yt-loader":13}],2:[function(require,module,exports) {
+},{"./yt-loader":8}],2:[function(require,module,exports) {
 'use strict';
 
 require('../scss/reset.scss');
@@ -313,7 +334,7 @@ require('./ui');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.onYouTubeIframeAPIReady = _ytLoader2.default;
-},{"../scss/reset.scss":10,"../scss/style.scss":11,"./video-data":12,"./yt-loader":13,"./data-handler":14,"./ui":15}],28:[function(require,module,exports) {
+},{"../scss/reset.scss":5,"../scss/style.scss":6,"./video-data":9,"./yt-loader":8,"./data-handler":10,"./ui":11}],55:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -335,7 +356,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51327' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54204' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -436,5 +457,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[28,2])
+},{}]},{},[55,2])
 //# sourceMappingURL=/dist/2609fea55a3e91c45b021e661febb047.map
