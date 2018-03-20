@@ -35,6 +35,10 @@ button:focus {
 .is-active {
 	display: inline-block !important;
 }
+.is-visible {
+	width: 30% !important;
+	opacity: 1 !important;
+}
 .not-hidden {
 	right: 0px !important;
 }
@@ -117,6 +121,7 @@ button:focus {
 		}
   }
 }
+
 // INFOS ------------------------------
 .infos {
 	position: absolute;
@@ -159,6 +164,35 @@ button:focus {
     }
   }
 }
+
+// MOREINFOS --------------------------
+.moreInfos {
+	background: rgba(0,0,0,0.75);
+	color: #fff;
+	width: 0%;
+	height: auto;
+	max-height: 400px;
+	border-radius: 20px;
+	padding: 20px;
+
+	overflow: hidden;
+	position: absolute;
+	z-index: 2;
+	bottom: 30px;
+	right: 30px;
+	opacity: 0;
+	transition: all 0.5s ease;
+	&_titleResume {
+		font-family: $Lato;
+		font-size: $Sml;
+		margin-bottom: 10px;
+	}
+	&_resume {
+		font-family: $Lato;
+		font-size: $xSml;
+	}
+}
+
 // PLAYER -----------------------------
 .player {
 	background: url('../assets/imgs/bg.jpg') no-repeat center;
@@ -182,7 +216,7 @@ button:focus {
 		&_buttons {
 			background: rgba(0,0,0,0.75);
 			padding: 10px;
-			margin: 5px;
+			margin: 0 5px;
 			border-radius: 50px;
 			opacity: 0.25;
 			transition: all 0.3s ease;
