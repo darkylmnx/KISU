@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({21:[function(require,module,exports) {
+})({33:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],18:[function(require,module,exports) {
+},{}],12:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,19 +132,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":21}],11:[function(require,module,exports) {
+},{"./bundle-url":33}],6:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":18}],12:[function(require,module,exports) {
+},{"_css_loader":12}],7:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../assets/fonts/Lato-Regular.ttf":[["7ad393b83d7ff2e0ada77c291832b226.ttf",37],37],"./../assets/fonts/Farsan-Regular.ttf":[["f32975e31bc36044c9831acb66c9c5a1.ttf",38],38],"./../assets/imgs/bg.jpg":[["83239aae8d1630e5bb71a4298c0dcb30.jpg",39],39],"./../assets/imgs/icons/unmute.svg":[["154b3096e9c94964c76cb59888e751bd.svg",40],40],"./../assets/imgs/icons/unmute-anim.svg":[["08cf5e902bd6653ba23fedad07229e97.svg",41],41],"./../assets/imgs/icons/mute.svg":[["5a248f73ce42b6796ba171b4099511f5.svg",42],42],"./../assets/imgs/icons/mute-anim.svg":[["a6f6a587829d1e9b2300c41d162ef952.svg",43],43],"./../assets/imgs/icons/play.svg":[["8913082a2ee02c273702bd3bf69c3d99.svg",44],44],"./../assets/imgs/icons/play-anim.svg":[["af9dd4a928e8c2f6efeb687759af4d46.svg",45],45],"./../assets/imgs/icons/pause.svg":[["2793cdce3945b5728e02350737621daf.svg",46],46],"./../assets/imgs/icons/pause-anim.svg":[["57f6c3df14d42a363ae0bb93d4adbf30.svg",47],47],"./../assets/imgs/icons/previous.svg":[["960857f29fe085bfce3dff4f769cbb20.svg",48],48],"./../assets/imgs/icons/previous-anim.svg":[["f70fac7c4bc8398d08f2301bf849749e.svg",49],49],"./../assets/imgs/icons/next.svg":[["7a41941fab1081d40e9476a24c4ad120.svg",50],50],"./../assets/imgs/icons/next-anim.svg":[["d8ed1cc540b765160bb6c735c1d6fc34.svg",51],51],"./../assets/imgs/icons/plus.svg":[["4057d24e22e62fe683448fcd7c687a2c.svg",52],52],"./../assets/imgs/icons/plus-anim.svg":[["c0131a93c56f6c9d47b0f8ecd3300c4b.svg",53],53],"_css_loader":18}],14:[function(require,module,exports) {
+},{"./../assets/fonts/Lato-Regular.ttf":[["7ad393b83d7ff2e0ada77c291832b226.ttf",13],13],"./../assets/fonts/Farsan-Regular.ttf":[["f32975e31bc36044c9831acb66c9c5a1.ttf",14],14],"./../assets/imgs/bg.jpg":[["83239aae8d1630e5bb71a4298c0dcb30.jpg",15],15],"./../assets/imgs/icons/unmute.svg":[["154b3096e9c94964c76cb59888e751bd.svg",16],16],"./../assets/imgs/icons/unmute-anim.svg":[["08cf5e902bd6653ba23fedad07229e97.svg",17],17],"./../assets/imgs/icons/mute.svg":[["5a248f73ce42b6796ba171b4099511f5.svg",18],18],"./../assets/imgs/icons/mute-anim.svg":[["a6f6a587829d1e9b2300c41d162ef952.svg",20],20],"./../assets/imgs/icons/play.svg":[["8913082a2ee02c273702bd3bf69c3d99.svg",19],19],"./../assets/imgs/icons/play-anim.svg":[["af9dd4a928e8c2f6efeb687759af4d46.svg",21],21],"./../assets/imgs/icons/pause.svg":[["2793cdce3945b5728e02350737621daf.svg",22],22],"./../assets/imgs/icons/pause-anim.svg":[["57f6c3df14d42a363ae0bb93d4adbf30.svg",23],23],"./../assets/imgs/icons/previous.svg":[["960857f29fe085bfce3dff4f769cbb20.svg",24],24],"./../assets/imgs/icons/previous-anim.svg":[["f70fac7c4bc8398d08f2301bf849749e.svg",25],25],"./../assets/imgs/icons/next.svg":[["7a41941fab1081d40e9476a24c4ad120.svg",26],26],"./../assets/imgs/icons/next-anim.svg":[["d8ed1cc540b765160bb6c735c1d6fc34.svg",27],27],"./../assets/imgs/icons/plus.svg":[["4057d24e22e62fe683448fcd7c687a2c.svg",28],28],"./../assets/imgs/icons/plus-anim.svg":[["c0131a93c56f6c9d47b0f8ecd3300c4b.svg",29],29],"./../assets/imgs/icons/group.svg":[["566fa29dfd7346f79484cb54ae2884f8.svg",30],30],"./../assets/imgs/icons/group-anim.svg":[["af8568f8f5e2d98bf1f3a0424d640013.svg",31],31],"_css_loader":12}],9:[function(require,module,exports) {
 window.playlist = [{
   "id": "CYPDjli1iRw",
   "anime": "One Punch Man",
@@ -186,7 +186,7 @@ window.playlist = [{
   "nb": "1",
   "category": "se"
 }];
-},{}],16:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -212,7 +212,7 @@ function getNextVideo() {
 function getRandom(list) {
     return Math.floor(Math.random() * list.length);
 }
-},{}],15:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -221,6 +221,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.player = undefined;
 exports.default = onYouTubeIframeAPIReady;
 exports.muteVideo = muteVideo;
+exports.unmuteVideo = unmuteVideo;
 exports.playVideo = playVideo;
 exports.pauseVideo = pauseVideo;
 exports.loadNextVideo = loadNextVideo;
@@ -254,7 +255,11 @@ function onYouTubeIframeAPIReady() {
 }
 
 function muteVideo() {
-  player.muteVideo();
+  player.unMute();
+}
+
+function unmuteVideo() {
+  player.mute();
 }
 
 function playVideo() {
@@ -270,41 +275,38 @@ function loadNextVideo() {
   player.loadVideoById(video.id);
   return video;
 }
-},{"./data-handler":16}],17:[function(require,module,exports) {
+},{"./data-handler":10}],11:[function(require,module,exports) {
 'use strict';
 
 var _ytLoader = require('./yt-loader');
 
 // PLAYER BUTTONS ---------------------
-var muteBtn = document.querySelector('#mute');
+var muteBtn = document.querySelector('#mute'); // IMPORT -----------------------------
+
 var unmuteBtn = document.querySelector('#unmute');
 var playBtn = document.querySelector('#play');
 var pauseBtn = document.querySelector('#pause');
 var nextBtn = document.querySelector('#next');
 var prevBtn = document.querySelector('#previous');
-var plusBtn = document.querySelector('#plus');
-var moreInfos = document.querySelector('.moreInfos');
 
 muteBtn.addEventListener('click', function () {
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
+  (0, _ytLoader.muteVideo)();
 });
 unmuteBtn.addEventListener('click', function () {
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
+  (0, _ytLoader.unmuteVideo)();
 });
 playBtn.addEventListener('click', function () {
   playBtn.classList.toggle('is-active');
   pauseBtn.classList.toggle('is-active');
-});
-pauseBtn.addEventListener('click', function () {
-  playBtn.classList.toggle('is-active');
-  pauseBtn.classList.toggle('is-active');
-});
-playBtn.addEventListener('click', function () {
   (0, _ytLoader.playVideo)();
 });
 pauseBtn.addEventListener('click', function () {
+  playBtn.classList.toggle('is-active');
+  pauseBtn.classList.toggle('is-active');
   (0, _ytLoader.pauseVideo)();
 });
 prevBtn.addEventListener('click', function () {
@@ -319,8 +321,18 @@ nextBtn.addEventListener('click', function () {
   playBtn.classList.remove('is-active');
   pauseBtn.classList.add('is-active');
 });
+
+// MORE -------------------------------
+var plusBtn = document.querySelector('#plus');
+var moreInfos = document.querySelector('.moreInfos');
+var team = document.querySelector('#team');
+var about = document.querySelector('.about');
+
 plusBtn.addEventListener('click', function () {
   moreInfos.classList.toggle('is-visible');
+});
+team.addEventListener('click', function () {
+  about.classList.toggle('is-scaled');
 });
 
 // SEARCH -----------------------------
@@ -340,7 +352,7 @@ burger.addEventListener('click', function () {
 function renderUI(video) {
   // update the ui
 }
-},{"./yt-loader":15}],7:[function(require,module,exports) {
+},{"./yt-loader":8}],2:[function(require,module,exports) {
 'use strict';
 
 require('../scss/reset.scss');
@@ -360,7 +372,7 @@ require('./ui');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.onYouTubeIframeAPIReady = _ytLoader2.default;
-},{"../scss/reset.scss":11,"../scss/style.scss":12,"./video-data":14,"./yt-loader":15,"./data-handler":16,"./ui":17}],63:[function(require,module,exports) {
+},{"../scss/reset.scss":6,"../scss/style.scss":7,"./video-data":9,"./yt-loader":8,"./data-handler":10,"./ui":11}],53:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -382,7 +394,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60275' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '56840' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -483,5 +495,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[63,7])
+},{}]},{},[53,2])
 //# sourceMappingURL=/dist/2609fea55a3e91c45b021e661febb047.map

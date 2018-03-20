@@ -1,4 +1,11 @@
-import { loadNextVideo, playVideo, pauseVideo } from './yt-loader';
+// IMPORT -----------------------------
+import {
+  muteVideo,
+  unmuteVideo,
+  loadNextVideo,
+  playVideo,
+  pauseVideo
+} from './yt-loader';
 
 // PLAYER BUTTONS ---------------------
 var muteBtn = document.querySelector('#mute');
@@ -7,29 +14,25 @@ var playBtn = document.querySelector('#play');
 var pauseBtn = document.querySelector('#pause');
 var nextBtn = document.querySelector('#next');
 var prevBtn = document.querySelector('#previous');
-var plusBtn = document.querySelector('#plus');
-var moreInfos = document.querySelector('.moreInfos');
 
 muteBtn.addEventListener('click', function() {
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
+  muteVideo();
 });
 unmuteBtn.addEventListener('click', function() {
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
+  unmuteVideo();
 });
 playBtn.addEventListener('click', function() {
   playBtn.classList.toggle('is-active');
   pauseBtn.classList.toggle('is-active');
-});
-pauseBtn.addEventListener('click', function() {
-  playBtn.classList.toggle('is-active');
-  pauseBtn.classList.toggle('is-active');
-});
-playBtn.addEventListener('click', function() {
   playVideo();
 });
 pauseBtn.addEventListener('click', function() {
+  playBtn.classList.toggle('is-active');
+  pauseBtn.classList.toggle('is-active');
   pauseVideo();
 });
 prevBtn.addEventListener('click', function() {
@@ -44,11 +47,20 @@ nextBtn.addEventListener('click', function() {
   playBtn.classList.remove('is-active');
   pauseBtn.classList.add('is-active');
 });
+
+// MORE -------------------------------
+var plusBtn = document.querySelector('#plus');
+var moreInfos = document.querySelector('.moreInfos');
+var team = document.querySelector('#team');
+var about = document.querySelector('.about');
+
 plusBtn.addEventListener('click', function() {
   moreInfos.classList.toggle('is-visible');
 
 });
-
+team.addEventListener('click', function() {
+  about.classList.toggle('is-scaled');
+});
 
 // SEARCH -----------------------------
 function changeBurger() {
