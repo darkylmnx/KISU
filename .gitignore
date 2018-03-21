@@ -1,4 +1,5 @@
 .DS_Store
+src/.DS_Store
 .cache
 .idea
 src/.cache
