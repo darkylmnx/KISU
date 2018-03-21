@@ -1,5 +1,6 @@
 .DS_Store
 .cache
+.idea
 src/.cache
 dist
 src/dist
