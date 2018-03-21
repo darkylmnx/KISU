@@ -68,8 +68,7 @@ input:focus {
   transform: scale(1) !important; }
 
 .is-scaled {
-  transform: scale(1) !important;
-  border-radius: 0px !important; }
+  left: 0 !important; }
 
 .not-hidden {
   right: 0px !important; }
@@ -87,20 +86,19 @@ input:focus {
 
 .about {
   background: rgba(0, 0, 0, 0.9);
-  width: 100%;
+  width: 350px;
   height: 100vh;
-  border-radius: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
+  left: -350px;
   z-index: 4;
-  transform: scale(0);
   transition: all 0.5s ease; }
   .about_title {
     color: #FF4A4A;
-    margin-bottom: 30px;
+    margin: 30px;
     font-family: "Lato-Regular";
     font-size: 3rem; }
   .about_subTitle {
@@ -113,7 +111,7 @@ input:focus {
     font-family: "Lato-Regular";
     font-size: 1.4rem;
     font-style: italic;
-    margin-bottom: 15px; }
+    margin: 0 30px 15px 30px; }
   .about_link {
     color: #FF4A4A;
     padding: 0 5px;
@@ -139,7 +137,7 @@ input:focus {
     .about_link:hover:after {
       height: 100%; }
   .about_items {
-    margin: 10px;
+    margin: 0 30px 15px 30px;
     text-align: left; }
   .about_item {
     color: #fff;

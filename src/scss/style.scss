@@ -43,8 +43,7 @@ input:focus {
 	transform: scale(1)!important;
 }
 .is-scaled {
-	transform: scale(1) !important;
-	border-radius: 0px !important;
+	left: 0 !important;
 }
 .not-hidden {
 	right: 0px !important;
@@ -64,20 +63,19 @@ input:focus {
 // ABOUT ------------------------------
 .about {
 	background: rgba(0,0,0,0.9);
-	width: 100%;
+	width: 350px;
 	height: 100vh;
-	border-radius: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
+	left: -350px;
 	z-index: 4;
-	transform: scale(0);
 	transition: all 0.5s ease;
 	&_title {
 		color: $red;
-		margin-bottom: 30px;
+		margin: 30px;
 		font-family: $Lato;
 		font-size: $Big;
 	}
@@ -92,7 +90,7 @@ input:focus {
 		font-family: $Lato;
 		font-size: $Norm;
 		font-style: italic;
-		margin-bottom: 15px;
+		margin: 0 30px 15px 30px;
 	}
 	&_link {
 		color: $red;
@@ -124,7 +122,7 @@ input:focus {
 
 	}
 	&_items {
-		margin: 10px;
+		margin: 0 30px 15px 30px;
 		text-align: left;
 	}
 	&_item {

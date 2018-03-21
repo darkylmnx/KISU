@@ -1,4 +1,6 @@
 .DS_Store
-src/dist
+.cache
 src/.cache
+dist
+src/dist
 node_modules
