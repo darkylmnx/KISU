@@ -7,13 +7,13 @@
 ## Features:
 
 1. [ ] **Must have:**
-    1. [ ] Create a player
-    2. [ ] Define some database
+    1. [x] Create a player
+    2. [x] Define some database
     3. [ ] Show current video informations (title, author, category)
 
 2. [ ] **Have:**
     1. [ ] Sort / Filter
-    2. [ ] Random
+    2. [x] Random
     3. [ ] More informations
     4. [ ] Share current video
 
