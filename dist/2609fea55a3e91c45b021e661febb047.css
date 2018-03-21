@@ -57,7 +57,8 @@ body {
   font-size: 62.5%;
   overflow: hidden; }
 
-button:focus {
+button:focus,
+input:focus {
   outline: 0; }
 
 .is-active {
@@ -102,6 +103,11 @@ button:focus {
     margin-bottom: 30px;
     font-family: "Lato-Regular";
     font-size: 3rem; }
+  .about_subTitle {
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: "Lato-Regular";
+    font-size: 2rem; }
   .about_text {
     color: #fff;
     font-family: "Lato-Regular";
@@ -133,7 +139,8 @@ button:focus {
     .about_link:hover:after {
       height: 100%; }
   .about_items {
-    margin: 10px; }
+    margin: 10px;
+    text-align: left; }
   .about_item {
     color: #fff;
     font-family: "Lato-Regular";
@@ -159,41 +166,26 @@ button:focus {
       width: 100px;
       height: 100px; }
   .header_menu {
-    width: 40px;
+    background: url("516907b47aee0124c1a224fb95b9d16d.svg") no-repeat center;
+    background-size: 20px 20px;
+    width: 20px;
     height: 20px;
     margin: 0 50px;
     position: relative;
-    cursor: pointer; }
-    .header_menu:hover > .header_menu_line {
-      background: #FF4A4A; }
-    .header_menu:before {
+    cursor: pointer;
+    transition: all .3s ease; }
+    .header_menu:after {
       content: '';
-      background: rgba(255, 255, 255, 0.5);
-      width: 60px;
-      height: 60px;
+      background: rgba(0, 0, 0, 0.75);
+      width: 40px;
+      height: 40px;
       border-radius: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      transition: all 0.3s ease; }
-    .header_menu:hover:before {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(1); }
-    .header_menu_line {
-      background: #fff;
-      width: 40px;
-      height: 2px;
-      position: absolute;
-      transition: all 0.3s ease; }
-      .header_menu_line:nth-child(1) {
-        top: 0; }
-      .header_menu_line:nth-child(2) {
-        top: 50%;
-        transform: translate(0, -50%); }
-      .header_menu_line:nth-child(3) {
-        bottom: 0; }
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      transition: all .3s ease; }
 
 .infos {
   position: absolute;
@@ -264,6 +256,8 @@ button:focus {
     z-index: 4;
     transform: translate(-50%, 0); }
     .player_buttonsBox:hover > .player_buttonsBox_buttons {
+      opacity: 1; }
+    .player_buttonsBox:hover > .header_menu {
       opacity: 1; }
     .player_buttonsBox_buttons {
       background: rgba(0, 0, 0, 0.75);
@@ -352,12 +346,64 @@ button:focus {
     background-size: 40px 40px; }
 
 .search {
-  background: #3F0000;
-  width: 300px;
+  background: rgba(255, 75, 74, 0.9);
+  width: 350px;
   height: 100vh;
   position: absolute;
-  right: -300px;
+  right: -350px;
   transition: all 0.5s ease-out; }
+  .search_title {
+    color: #fff;
+    font-family: "Lato-Regular";
+    font-size: 3rem;
+    margin-bottom: 50px;
+    padding: 25px 25px 0; }
+  .search_inputBox {
+    padding: 0 25px 25px;
+    display: flex;
+    align-items: center; }
+    .search_inputBox_input {
+      background: transparent;
+      color: #fff;
+      width: 200px;
+      border: 0px;
+      border-bottom: 2px #fff solid;
+      font-size: 1.4rem; }
+    .search_inputBox_img {
+      width: 20px;
+      height: auto;
+      padding-left: 10px;
+      cursor: pointer; }
+  .search_type {
+    padding: 0px 25px 25px 25px; }
+    .search_type_title {
+      color: #fff;
+      font-family: "Lato-Regular";
+      font-size: 1.8rem;
+      margin-bottom: 10px; }
+    .search_type_button {
+      color: #fff;
+      border: 2px #fff solid;
+      padding: 5px 10px;
+      margin-right: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease; }
+  .search_category {
+    padding: 0px 25px 25px 25px; }
+    .search_category_title {
+      color: #fff;
+      font-family: "Lato-Regular";
+      font-size: 1.8rem;
+      margin-bottom: 10px; }
+    .search_category_button {
+      color: #fff;
+      border: 2px #fff solid;
+      padding: 5px 10px;
+      margin-right: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease; }
 
 .aoe-player {
   width: 100%;
@@ -370,14 +416,35 @@ button:focus {
     top: 0;
     left: 0; }
 
-#shonen {
-  background: lightblue;
-  color: darkblue; }
+.op {
+  background: #2E84FC; }
+  .op:hover {
+    background: #fff;
+    color: #2E84FC; }
 
-#action {
-  background: red;
-  color: darkred; }
+.en {
+  background: #2EE28A; }
+  .en:hover {
+    background: #fff;
+    color: #2EE28A; }
 
-#aventure {
-  background: lightgreen;
-  color: darkgreen; }
+.sn {
+  background: #bacbff;
+  color: #0029a5; }
+  .sn:hover {
+    background: #fff;
+    color: #bacbff; }
+
+.se {
+  background: #ffa100;
+  color: #7f4e00; }
+  .se:hover {
+    background: #fff;
+    color: #ffa100; }
+
+.sj {
+  background: #f284ff;
+  color: #9200a5; }
+  .sj:hover {
+    background: #fff;
+    color: #f284ff; }

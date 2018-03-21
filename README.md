@@ -1,36 +1,34 @@
 # AOE
 
-## Name : Kisu
+## Name : Kisu 🐶
 
-## Pitch
+> **Kisu** is a visual radio that showcases anime openings and endings 🎌.
 
-**Kisu** is a visual radio that showcases anime openings and endings.
+## Features:
 
-## Vocabulary
+1. [ ] **Must have:**
+    1. [ ] Create a player
+    2. [ ] Define some database
+    3. [ ] Show current video informations (title, author, category)
 
-sj : Shojo
-sn : Shonen
-se : Seinen
-o : Opening
-e : Ending
+2. [ ] **Have:**
+    1. [ ] Sort / Filter
+    2. [ ] Random
+    3. [ ] More informations
+    4. [ ] Share current video
 
-## Features : Must have
+3. [ ] **Best Case:**
+    1. [ ] DDL video
+    2. [ ] Account
+    3. [ ] Likes
+    4. [ ] Comments
+    5. [ ] Vues
+    6. [ ] Blind test
 
-1. Create a player
-2. Define some database
-3. Show current video informations (title, author, category)
+## Vocabulary :
 
-## Features : Have
-
-1. Sort / Filter
-2. Random
-3. More informations
-4. Share current video
-
-## Features : Best Case
-
-1. DDL video
-2. Account
-3. Likes
-4. Comments
-5. Vues
+* sj : Shojo
+* sn : Shonen
+* se : Seinen
+* o : Opening
+* e : Ending

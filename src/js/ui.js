@@ -63,17 +63,11 @@ team.addEventListener('click', function() {
 });
 
 // SEARCH -----------------------------
-function changeBurger() {
-  var lines = document.querySelectorAll('.header_menu_line');
-  lines[0].classList.toggle('rotate');
-  lines[1].classList.toggle('disappear');
-  lines[2].classList.toggle('invRotate');
-}
 var burger = document.querySelector('.header_menu');
 var search = document.querySelector('.search');
 burger.addEventListener('click', function() {
   search.classList.toggle('not-hidden');
-  changeBurger()
+
 });
 
 function renderUI(video) {

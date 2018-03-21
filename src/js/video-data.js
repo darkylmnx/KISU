@@ -4,7 +4,7 @@ window.playlist = [
     "anime": "One Punch Man",
     "title": "THE HERO !!",
     "author": "J​AM Project",
-    "type": "o",
+    "type": "op",
     "nb": "1",
     "category": "sn"
   },
@@ -13,7 +13,7 @@ window.playlist = [
     "anime": "Gambling School",
     "title": "Deal with the Devil",
     "author": "Tia",
-    "type": "o",
+    "type": "op",
     "nb": "1",
     "category": "sn"
   },
@@ -22,7 +22,7 @@ window.playlist = [
     "anime": "Golden Time",
     "title": "Golden Time",
     "author": "Yui Horie",
-    "type": "o",
+    "type": "op",
     "nb": "1",
     "category": "sj"
   },
@@ -31,7 +31,7 @@ window.playlist = [
     "anime": "Bleach",
     "title": "Rolling Star",
     "author": "Yui",
-    "type": "o",
+    "type": "op",
     "nb": "5",
     "category": "sn"
   },
@@ -40,9 +40,8 @@ window.playlist = [
     "anime": "One Outs",
     "title": "Bury",
     "author": "Pay money To my Pain",
-    "type": "o",
+    "type": "op",
     "nb": "1",
     "category": "se"
   }
 ];
-

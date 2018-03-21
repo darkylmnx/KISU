@@ -23,6 +23,8 @@ $xSml: 1.0rem;
 // $var color -------------------------
 $red: #FF4A4A;
 $dRed: #3F0000;
+$opColor: #2E84FC;
+$enColor: #2EE28A;
 
 // GLOBAL -----------------------------
 body {
@@ -30,7 +32,8 @@ body {
   font-size: 62.5%;
 	overflow: hidden;
 }
-button:focus {
+button:focus,
+input:focus {
 	outline: 0;
 }
 .is-active {
@@ -78,6 +81,12 @@ button:focus {
 		font-family: $Lato;
 		font-size: $Big;
 	}
+	&_subTitle {
+		color: #fff;
+		margin-bottom: 10px;
+		font-family: $Lato;
+		font-size: $Reg;
+	}
 	&_text {
 		color: #fff;
 		font-family: $Lato;
@@ -116,6 +125,7 @@ button:focus {
 	}
 	&_items {
 		margin: 10px;
+		text-align: left;
 	}
 	&_item {
 		color: #fff;
@@ -148,47 +158,26 @@ button:focus {
 	  }
 	}
   &_menu {
-		width: 40px;
+		background: url('../assets/imgs/icons/search.svg') no-repeat center;
+		background-size: 20px 20px;
+		width: 20px;
 		height: 20px;
     margin: 0 50px;
 		position: relative;
     cursor: pointer;
-		&:hover > .header_menu_line {
-			background: $red;
-		}
-		&:before {
+		transition: all .3s ease;
+		&:after {
 			content: '';
-			background: rgba(255,255,255,0.5);
-			width: 60px;
-			height: 60px;
+			background: rgba(0,0,0,0.75);
+			width: 40px;
+			height: 40px;
 			border-radius: 100%;
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, -50%) scale(0);
-			transition: all 0.3s ease;
-		}
-		&:hover:before {
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) scale(1);
-		}
-		&_line {
-			background: #fff;
-			width: 40px;
-			height: 2px;
-			position: absolute;
-			transition: all 0.3s ease;
-			&:nth-child(1) {
-				top: 0;
-			}
-			&:nth-child(2) {
-				top: 50%;
-				transform: translate(0, -50%);
-			}
-			&:nth-child(3) {
-				bottom: 0;
-			}
+			z-index: -1;
+			transform: translate(-50%, -50%);
+			transition: all .3s ease;
 		}
   }
 }
@@ -276,6 +265,9 @@ button:focus {
 		z-index: 4;
 		transform: translate(-50%, 0);
 		&:hover > .player_buttonsBox_buttons {
+			opacity: 1;
+		}
+		&:hover > .header_menu {
 			opacity: 1;
 		}
 		&_buttons {
@@ -378,12 +370,75 @@ button:focus {
 
 // SEARCH -----------------------------
 .search {
-	background: $dRed;
-	width: 300px;
+	background: rgba(255,75,74,0.9);
+	width: 350px;
 	height: 100vh;
 	position: absolute;
-	right: -300px;
+	right: -350px;
 	transition: all 0.5s ease-out;
+	&_title {
+		color: #fff;
+		font-family: $Lato;
+		font-size: $Big;
+		margin-bottom: 50px;
+		padding: 25px 25px 0;
+	}
+	&_inputBox {
+
+		padding: 0 25px 25px;
+		display: flex;
+		align-items: center;
+		&_input {
+			background: rgba(0,0,0,0);
+			color: #fff;
+			width: 200px;
+			border: 0px;
+			border-bottom: 2px #fff solid;
+			font-size: $Norm;
+		}
+		&_img {
+			width: 20px;
+			height: auto;
+			padding-left: 10px;
+			cursor: pointer;
+		}
+	}
+	&_type {
+		padding: 0px 25px 25px 25px;
+		&_title {
+			color: #fff;
+			font-family: $Lato;
+			font-size: $Sml;
+			margin-bottom: 10px;
+		}
+		&_button {
+			color: #fff;
+			border: 2px #fff solid;
+			padding: 5px 10px;
+			margin-right: 5px;
+			font-size: $xSml;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+	}
+	&_category {
+		padding: 0px 25px 25px 25px;
+		&_title {
+			color: #fff;
+			font-family: $Lato;
+			font-size: $Sml;
+			margin-bottom: 10px;
+		}
+		&_button {
+			color: #fff;
+			border: 2px #fff solid;
+			padding: 5px 10px;
+			margin-right: 5px;
+			font-size: $xSml;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+	}
 }
 
 // ------------------
@@ -399,15 +454,41 @@ button:focus {
 		left: 0;
 	}
 }
-#shonen {
-  background: lightblue;
-  color: darkblue;
+.op {
+	background: $opColor;
+	&:hover {
+		background: #fff;
+		color: $opColor;
+	}
 }
-#action {
-  background: red;
-  color: darkred;
+.en {
+	background: $enColor;
+	&:hover {
+		background: #fff;
+		color: $enColor;
+	}
 }
-#aventure {
-  background: lightgreen;
-  color: darkgreen;
+.sn {
+  background: #bacbff;
+  color: #0029a5;
+	&:hover {
+		background: #fff;
+		color: #bacbff;
+	}
+}
+.se {
+  background: #ffa100;
+  color: #7f4e00;
+	&:hover {
+		background: #fff;
+		color: #ffa100;
+	}
+}
+.sj {
+  background: #f284ff;
+  color: #9200a5;
+	&:hover {
+		background: #fff;
+		color: #f284ff;
+	}
 }

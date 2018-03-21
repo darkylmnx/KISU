@@ -10,7 +10,9 @@
     <h3 class="about_title">About us !</h3>
     <p class="about_text">Kisu is a visual radio that showcases anime openings and endings.</p>
     <p class="about_text">This project was imaginated by our Javascript teacher, <a href="http://otakod.es" class="about_link">Ariel-sensei</a>.</p>
+
     <ul class="about_items">
+      <h4 class="about_subTitle">Our team :</h4>
       <li class="about_item"><a href="" class="about_link">Ariel-sensei</a>, our master</li>
       <li class="about_item"><a href="#" class="about_link">Marie-chan</a>, our graphic designer</li>
       <li class="about_item"><a href="#" class="about_link">Alex-kun</a>, our lead front-end</li>
@@ -24,20 +26,17 @@
       <img src="assets/imgs/icons/icon.svg" alt="kisu logo" class="header_title_icon">
       <img src="assets/imgs/icons/logo.svg" alt="kisu logo" class="header_title_logo">
     </div>
-    <div src="assets/imgs/burger.png" alt="" class="header_menu">
-      <div class="header_menu_line"></div>
-      <div class="header_menu_line"></div>
-      <div class="header_menu_line"></div>
+    <div class="header_menu">
     </div>
   </header>
   <section class="infos">
     <div class="infos_titleBox">
       <h2 class="infos_titleBox_title">Title</h2>
-      <span class="infos_titleBox_type">ed</span>
+      <span class="infos_titleBox_type op">op</span>
     </div>
     <h3 class="infos_author">author</h3>
     <div class="infos_tags">
-      <span class="infos_tags_tag" id="shonen">#shonen</span>
+      <span class="infos_tags_tag sn">#seinen</span>
       <span class="infos_tags_tag" id="action">#action</span>
       <span class="infos_tags_tag" id="aventure">#aventure</span>
     </div>
@@ -69,7 +68,26 @@
 
   </section>
   <section class="search">
-
+    <h4 class="search_title">Search</h4>
+    <div class="search_inputBox">
+    <input type="text" class="search_inputBox_input">
+    <img src="assets/imgs/icons/search.svg" alt="" class="search_inputBox_img">
+    </div>
+    <div class="search_type">
+      <h5 class="search_type_title">Type :</h5>
+      <div class="search_type_buttons">
+        <button class="search_type_button op">OP</button>
+        <button class="search_type_button en ">EN</button>
+      </div>
+    </div>
+    <div class="search_category">
+      <h5 class="search_category_title">Category :</h5>
+      <div class="search_category_buttons">
+        <button class="search_category_button se">SEINEN</button>
+        <button class="search_category_button sn">SHONEN</button>
+        <button class="search_category_button sj">SHOJÔ</button>
+      </div>
+    </div>
   </section>
     <script>
         var tag = document.createElement('script');
