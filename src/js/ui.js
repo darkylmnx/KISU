@@ -72,6 +72,23 @@ burger.addEventListener('click', function() {
 
 });
 
+var overlay = document.querySelector('.aoe-player_overlay');
+var infos = document.querySelector('.infos');
+overlay.addEventListener('mousemove', function() {
+  overlay.style.background = "rgba(0,0,0,0.75)";
+  infos.classList.remove('disappear');
+});
+document.onmousemove = (function() {
+  var onmousestop = function() {
+    overlay.style.background = "";
+    infos.classList.add('disappear');
+  }, thread;
+
+  return function() {
+    clearTimeout(thread);
+    thread = setTimeout(onmousestop, 3000);
+  };
+})();
 
 
 function renderUI(video) {
