@@ -52,7 +52,68 @@ window.playlist = [
       "type": "en",
       "nb": "1",
       "category": "shonen"
+  },
+  {
+      "id": "5diaZzBr4_M",
+      "anime": "PSYCHO-PASS",
+      "title": "Abnormalize",
+      "author": "Rin Toshite Shigure",
+      "type": "op",
+      "nb": "1",
+      "category": "seinen"
+  },
+  {
+      "id": "K--eOYxCJE4",
+      "anime": "PSYCHO-PASS",
+      "title": "Enigmatic Feeling",
+      "author": "Nautiljon",
+      "type": "op",
+      "nb": "2",
+      "category": "seinen"
+  },
+  {
+      "id": "inq4vsIn6zA",
+      "anime": "Noragami",
+      "title": "Hello Sleepwalkers",
+      "author": "Goya no Machiawase",
+      "type": "op",
+      "nb": "1",
+      "category": "shonen"
+  },
+  {
+      "id": "aZenmeRytEM",
+      "anime": "Noragami",
+      "title": "Hey Kids !",
+      "author": "The Oral Cigarettes",
+      "type": "op",
+      "nb": "2",
+      "category": "shonen"
+  },
+  {
+      "id": "XMXgHfHxKVM",
+      "anime": "Shingeki no Kyojin",
+      "title": "Guren no Yumiya",
+      "author": "Linked Horizon",
+      "type": "op",
+      "nb": "1",
+      "category": "shonen"
+  },
+  {
+      "id": "CID-sYQNCew",
+      "anime": "Shingeki no Kyojin",
+      "title": "Shinzou wo Sasageyo",
+      "author": "Linked Horizon",
+      "type": "op",
+      "nb": "2",
+      "category": "shonen"
+  },
+  {
+      "id": "mxcH--Y7WiA",
+      "anime": "Death Note",
+      "title": "the WORLD",
+      "author": "Nightmare",
+      "type": "op",
+      "nb": "1",
+      "category": "sheinen"
   }
-
-
 ];
