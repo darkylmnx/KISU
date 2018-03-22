@@ -3,6 +3,7 @@ import {
   muteVideo,
   unmuteVideo,
   loadNextVideo,
+  loadPrevVideo,
   playVideo,
   pauseVideo
 } from './yt-loader';
@@ -36,7 +37,7 @@ pauseBtn.addEventListener('click', function() {
   pauseVideo();
 });
 prevBtn.addEventListener('click', function() {
-  var video = loadNextVideo();
+  var video = loadPrevVideo();
   renderUI(video);
   playBtn.classList.remove('is-active');
   pauseBtn.classList.add('is-active');

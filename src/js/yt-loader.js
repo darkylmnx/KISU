@@ -1,4 +1,4 @@
-import { getNextVideo } from './data-handler';
+import { getNextVideo,getPrevVideo } from './data-handler';
 
 export var player;
 export default function onYouTubeIframeAPIReady() {
@@ -46,4 +46,9 @@ export function loadNextVideo() {
   var video = getNextVideo();
   player.loadVideoById(video.id);
   return video;
+}
+export function loadPrevVideo(){
+  var video = getPrevVideo();
+    player.loadVideoById(video.id);
+    return video;
 }
