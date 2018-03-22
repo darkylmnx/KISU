@@ -25,6 +25,9 @@ export default function onYouTubeIframeAPIReady() {
     }
   });
 }
+var title = document.querySelector('#title');
+var author = document.querySelector('#author');
+var type = document.querySelector('#type');
 
 export function muteVideo(){
   player.unMute();
@@ -45,10 +48,17 @@ export function pauseVideo(){
 export function loadNextVideo() {
   var video = getNextVideo();
   player.loadVideoById(video.id);
+  title.innerHTML = video.title;
+  author.innerHTML = video.author;
+  type.innerHTML = video.type;
   return video;
 }
 export function loadPrevVideo(){
   var video = getPrevVideo();
-    player.loadVideoById(video.id);
-    return video;
+  player.loadVideoById(video.id);
+  title.innerHTML = video.title;
+  author.innerHTML = video.author;
+  type.innerHTML = video.type;
+  return video;
 }
+

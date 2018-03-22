@@ -36,12 +36,23 @@ window.playlist = [
     "category": "sn"
   },
   {
-    "id": "UbJeAf7stfQ",
-    "anime": "One Outs",
-    "title": "Bury",
-    "author": "Pay money To my Pain",
-    "type": "op",
-    "nb": "1",
-    "category": "se"
+      "id": "UbJeAf7stfQ",
+      "anime": "One Outs",
+      "title": "Bury",
+      "author": "Pay money To my Pain",
+      "type": "op",
+      "nb": "1",
+      "category": "se"
+  },
+  {
+      "id": "4DcR_BgyQ7k",
+      "anime": "Sword Art Online",
+      "title": "Overfly",
+      "author": "Luna Haruna",
+      "type": "en",
+      "nb": "1",
+      "category": "sn"
   }
+
+
 ];

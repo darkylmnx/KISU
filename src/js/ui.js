@@ -16,6 +16,7 @@ var pauseBtn = document.querySelector('#pause');
 var nextBtn = document.querySelector('#next');
 var prevBtn = document.querySelector('#previous');
 
+
 muteBtn.addEventListener('click', function() {
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
@@ -70,6 +71,8 @@ burger.addEventListener('click', function() {
   search.classList.toggle('not-hidden');
 
 });
+
+
 
 function renderUI(video) {
     // update the ui
