@@ -20,12 +20,12 @@ var prevBtn = document.querySelector('#previous');
 muteBtn.addEventListener('click', function() {
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
-  muteVideo();
+  unmuteVideo();
 });
 unmuteBtn.addEventListener('click', function() {
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
-  unmuteVideo();
+  muteVideo();
 });
 playBtn.addEventListener('click', function() {
   playBtn.classList.toggle('is-active');
@@ -74,6 +74,10 @@ burger.addEventListener('click', function() {
 
 var overlay = document.querySelector('.aoe-player_overlay');
 var infos = document.querySelector('.infos');
+overlay.addEventListener('click', function() {
+  about.classList.remove('is-scaled');
+  search.classList.remove('not-hidden');
+});
 overlay.addEventListener('mousemove', function() {
   overlay.style.background = "rgba(0,0,0,0.75)";
   infos.classList.remove('disappear');

@@ -32,10 +32,10 @@ $Norm: 1.4rem;
 $xSml: 1.0rem;
 
 // $var color -------------------------
-$red: #ffd772;
+$red: #ff8282;
 $dRed: #3F0000;
-$opColor: #2E84FC;
-$enColor: #2EE28A;
+$opColor: #007f7d;
+$enColor: #897e00;
 
 // GLOBAL -----------------------------
 body {
@@ -87,7 +87,7 @@ input:focus {
 	&_title {
 		color: $red;
 		margin: 30px;
-		font-family: $Lato;
+		font-family: $Lato-Bld;
 		font-size: $Big;
 	}
 	&_subTitle {
@@ -102,6 +102,7 @@ input:focus {
 		font-size: $Norm;
 		font-style: italic;
 		margin: 0 30px 15px 30px;
+		line-height: 1.2;
 	}
 	&_link {
 		color: $red;
@@ -138,7 +139,7 @@ input:focus {
 	}
 	&_item {
 		color: #fff;
-		font-family: $Lato;
+		font-family: $Lato-Lgh;
 		font-size: $Norm;
 		margin-bottom: 10px;
 	}
@@ -491,26 +492,26 @@ input:focus {
 	}
 }
 .shonen {
-  background: #bacbff;
+  background: #825f00;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #bacbff;
+		color: #825f00;
 	}
 }
 .seinen {
-  background: #ffa100;
+  background: #005282;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #ffa100;
+		color: #005282
 	}
 }
 .shojo {
-  background: #f284ff;
+  background: #800087;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #f284ff;
+		color: #800087;
 	}
 }
