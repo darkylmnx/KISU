@@ -187,30 +187,38 @@ input:focus {
 	bottom: 100px;
 	z-index: 2;
   &_titleBox {
-		color: #fff;
+		color: $red;
     display: flex;
     align-items: flex-end;
 		font-family: $Lato;
     &_title {
       font-size: $Big;
     }
-    &_type {
-      background: #2E84FC;
-      padding: 5px;
-      margin: 0 15px;
-      text-transform: uppercase;
-      font-size: $xSml;
-    }
+		&_span {
+			margin: 0 15px;
+			font-family: $Lato;
+			font-size: $Big;
+		}
   }
   &_author {
-		color: #fff;
+		color: $red;
 		margin: 5px 0 15px 0;
     text-transform: uppercase;
     font-family: $Lato;
     font-size: $Sml;
   }
   &_tags {
+		&_type {
+			font-family: $Lato;
+      background: #2E84FC;
+      padding: 5px;
+      margin: 0 10px 0 0;
+			border-radius: 5px;
+      text-transform: uppercase;
+      font-size: $xSml;
+    }
     &_tag {
+			text-transform: uppercase;
       padding: 5px;
       margin-right: 15px;
       border-radius: 5px;
@@ -226,10 +234,10 @@ input:focus {
 	color: #fff;
 	width: 20%;
 	height: auto;
-	border-radius: 20px;
 	padding: 20px;
+	border-radius: 20px;
+	font-family: $Lato;
 	position: absolute;
-		font-family: $Lato;
 	z-index: 2;
 	bottom: 30px;
 	right: 30px;
@@ -466,7 +474,7 @@ input:focus {
 		color: $enColor;
 	}
 }
-.sn {
+.shonen {
   background: #bacbff;
   color: #0029a5;
 	&:hover {
@@ -474,7 +482,7 @@ input:focus {
 		color: #bacbff;
 	}
 }
-.se {
+.seinen {
   background: #ffa100;
   color: #7f4e00;
 	&:hover {
@@ -482,7 +490,7 @@ input:focus {
 		color: #ffa100;
 	}
 }
-.sj {
+.shojo {
   background: #f284ff;
   color: #9200a5;
 	&:hover {
