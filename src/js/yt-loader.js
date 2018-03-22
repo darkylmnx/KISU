@@ -1,6 +1,7 @@
 import { getNextVideo,getPrevVideo } from './data-handler';
 
 export var player;
+export var videotime = 0;
 export default function onYouTubeIframeAPIReady() {
   player = new YT.Player('aoe-player', {
     playerVars: {
@@ -20,11 +21,43 @@ export default function onYouTubeIframeAPIReady() {
     events: {
       onReady: function() {
         loadNextVideo();
+        currentTime();
+        duration();
       },
-      // 'onStateChange': onPlayerStateChange
+      onStateChange :function () {
+        onPlayerStateChange();
+      }
     }
   });
 }
+export function currentTime() {
+    function updateTime() {
+        if(player && player.getCurrentTime) {
+            videotime = player.getCurrentTime();
+            console.log(videotime);
+        }
+    }
+    timeupdater = setInterval(updateTime, 1000);
+}
+
+export function onPlayerStateChange() {
+        console.log('j')
+}
+
+/*export function duration() {
+    function updateTime() {
+        var oldTime = videotime;
+        if(player && player.getDuration()) {
+            videotime = player.getDuration();
+            console.log(videotime);
+        }
+        if(videotime !== oldTime) {
+            onProgress(videotime);
+        }
+    }
+    timeupdaters = setInterval(updateTime, 1000);
+}*/
+
 var title = document.querySelector('#title');
 var anime = document.querySelector('#anime');
 var author = document.querySelector('#author');

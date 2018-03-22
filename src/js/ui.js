@@ -1,11 +1,11 @@
 // IMPORT -----------------------------
 import {
-  muteVideo,
-  unmuteVideo,
-  loadNextVideo,
-  loadPrevVideo,
-  playVideo,
-  pauseVideo
+    muteVideo,
+    unmuteVideo,
+    loadNextVideo,
+    loadPrevVideo,
+    playVideo,
+    pauseVideo, autorunVideo, player
 } from './yt-loader';
 
 // PLAYER BUTTONS ---------------------
@@ -71,6 +71,7 @@ burger.addEventListener('click', function() {
   search.classList.toggle('not-hidden');
 
 });
+
 
 
 

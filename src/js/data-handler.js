@@ -1,3 +1,5 @@
+import {player} from "./yt-loader";
+
 var playlist2 = playlist.slice();
 var current_video;
 var memo_video = [];
@@ -42,4 +44,3 @@ export function getPrevVideo() {
         return current_video;
     }
 }
-
