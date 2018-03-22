@@ -462,6 +462,7 @@ input:focus {
 }
 .op {
 	background: $opColor;
+	color: #fff;
 	&:hover {
 		background: #fff;
 		color: $opColor;
@@ -469,6 +470,7 @@ input:focus {
 }
 .en {
 	background: $enColor;
+	color: #fff;
 	&:hover {
 		background: #fff;
 		color: $enColor;
@@ -476,7 +478,7 @@ input:focus {
 }
 .shonen {
   background: #bacbff;
-  color: #0029a5;
+  color: #fff;
 	&:hover {
 		background: #fff;
 		color: #bacbff;
@@ -484,7 +486,7 @@ input:focus {
 }
 .seinen {
   background: #ffa100;
-  color: #7f4e00;
+  color: #fff;
 	&:hover {
 		background: #fff;
 		color: #ffa100;
@@ -492,7 +494,7 @@ input:focus {
 }
 .shojo {
   background: #f284ff;
-  color: #9200a5;
+  color: #fff;
 	&:hover {
 		background: #fff;
 		color: #f284ff;
