@@ -6,10 +6,10 @@
 
 ## Features:
 
-1. [ ] **Must have:**
+1. [x] **Must have:**
     1. [x] Create a player
     2. [x] Define some database
-    3. [ ] Show current video informations (title, author, category)
+    3. [x] Show current video informations (title, author, category)
 
 2. [ ] **Have:**
     1. [ ] Sort / Filter

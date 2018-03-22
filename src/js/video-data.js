@@ -6,7 +6,7 @@ window.playlist = [
     "author": "J​AM Project",
     "type": "op",
     "nb": "1",
-    "category": "sn"
+    "category": "shonen"
   },
   {
     "id": "9WB938n2Rmk",
@@ -15,7 +15,7 @@ window.playlist = [
     "author": "Tia",
     "type": "op",
     "nb": "1",
-    "category": "sn"
+    "category": "shonen"
   },
   {
     "id": "h0qQuMMKGyQ",
@@ -24,7 +24,7 @@ window.playlist = [
     "author": "Yui Horie",
     "type": "op",
     "nb": "1",
-    "category": "sj"
+    "category": "shojo"
   },
   {
     "id": "YTMrvnyhMac",
@@ -33,7 +33,7 @@ window.playlist = [
     "author": "Yui",
     "type": "op",
     "nb": "5",
-    "category": "sn"
+    "category": "shonen"
   },
   {
       "id": "UbJeAf7stfQ",
@@ -42,7 +42,7 @@ window.playlist = [
       "author": "Pay money To my Pain",
       "type": "op",
       "nb": "1",
-      "category": "se"
+      "category": "seinen"
   },
   {
       "id": "4DcR_BgyQ7k",
@@ -51,7 +51,7 @@ window.playlist = [
       "author": "Luna Haruna",
       "type": "en",
       "nb": "1",
-      "category": "sn"
+      "category": "shonen"
   }
 
 

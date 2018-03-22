@@ -26,8 +26,12 @@ export default function onYouTubeIframeAPIReady() {
   });
 }
 var title = document.querySelector('#title');
+var anime = document.querySelector('#anime');
 var author = document.querySelector('#author');
 var type = document.querySelector('#type');
+var category = document.querySelector('#category');
+var infosType = document.querySelector('.infos_tags_type');
+var infosCategory = document.querySelector('.infos_tags_tag');
 
 export function muteVideo(){
   player.unMute();
@@ -49,16 +53,69 @@ export function loadNextVideo() {
   var video = getNextVideo();
   player.loadVideoById(video.id);
   title.innerHTML = video.title;
+  anime.innerHTML = video.anime;
   author.innerHTML = video.author;
   type.innerHTML = video.type;
+  var videoType = video.type;
+  if (videoType === 'op') {
+    infosType.classList.add('op');
+    infosType.classList.remove('en');
+  }
+  else {
+    infosType.classList.add('en');
+    infosType.classList.remove('op');
+  }
+  category.innerHTML = video.category;
+  var videoCategory = video.category;
+  if (videoCategory === 'seinen') {
+    infosCategory.classList.add('seinen');
+    infosCategory.classList.remove('shonen');
+    infosCategory.classList.remove('shojo');
+  }
+  else if (videoCategory === 'shonen') {
+    infosCategory.classList.remove('seinen');
+    infosCategory.classList.add('shonen');
+    infosCategory.classList.remove('shojo');
+  }
+  else {
+    infosCategory.classList.remove('seinen');
+    infosCategory.classList.remove('shonen');
+    infosCategory.classList.add('shojo');
+  }
   return video;
 }
 export function loadPrevVideo(){
   var video = getPrevVideo();
   player.loadVideoById(video.id);
   title.innerHTML = video.title;
+  anime.innerHTML = video.anime;
   author.innerHTML = video.author;
   type.innerHTML = video.type;
+  var videoType = video.type;
+  if (videoType === 'op') {
+    infosType.classList.add('op');
+    infosType.classList.remove('en');
+  }
+  else {
+    infosType.classList.add('en');
+    infosType.classList.remove('op');
+  }
+  category.innerHTML = video.category;
+  var videoCategory = video.category;
+  if (videoCategory === 'seinen') {
+    infosCategory.classList.add('seinen');
+    infosCategory.classList.remove('shonen');
+    infosCategory.classList.remove('shojo');
+  }
+  else if (videoCategory === 'shonen') {
+    infosCategory.classList.remove('seinen');
+    infosCategory.classList.add('shonen');
+    infosCategory.classList.remove('shojo');
+  }
+  else {
+    infosCategory.classList.remove('seinen');
+    infosCategory.classList.remove('shonen');
+    infosCategory.classList.add('shojo');
+  }
   return video;
 }
-
