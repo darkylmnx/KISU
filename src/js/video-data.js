@@ -52,7 +52,6 @@ window.playlist = [
       "type": "en",
       "nb": "1",
       "category": "shonen"
-<<<<<<< HEAD
     },
     {
         "id": "Ww9Bd_EMCZY",
