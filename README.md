@@ -6,10 +6,11 @@
 
 ## Features:
 
-1. [x] **Must have:**
+1. [ ] **Must have:**
     1. [x] Create a player
     2. [x] Define some database
     3. [x] Show current video informations (title, author, category)
+    4. [ ] Autoplay
 
 2. [ ] **Have:**
     1. [ ] Sort / Filter
@@ -27,8 +28,8 @@
 
 ## Vocabulary :
 
-* sj : Shojo
-* sn : Shonen
-* se : Seinen
-* o : Opening
-* e : Ending
+* `shojo` : Shojo
+* `shonen` : Shonen
+* `seinen` : Seinen
+* `op` : Opening
+* `en` : Ending
