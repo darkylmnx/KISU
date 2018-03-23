@@ -56,10 +56,10 @@ window.playlist = [
     {
         "id": "Ww9Bd_EMCZY",
         "anime": "Naruto Shippuden",
-        "title": "You are my friend!",
-        "author": "Distance",
+        "title": "Distance",
+        "author": "LONG SHOT PARTY",
         "type": "op",
-        "nb": "1",
+        "nb": "2",
         "category": "shonen"
     },
     {
@@ -135,14 +135,32 @@ window.playlist = [
       "category": "shonen"
   },
   {
-      "id": "mxcH--Y7WiA",
-      "anime": "Death Note",
-      "title": "the WORLD",
-      "author": "Nightmare",
-      "type": "op",
-      "nb": "1",
-      "category": "sheinen"
-  }
+        "id": "mxcH--Y7WiA",
+        "anime": "Death Note",
+        "title": "the WORLD",
+        "author": "Nightmare",
+        "type": "op",
+        "nb": "1",
+        "category": "shonen"
+    },
+    {
+        "id": "2uq34TeWEdQ",
+        "anime": "Fullmetal Alchemist Brotherhood",
+        "title": "again",
+        "author": "Yui",
+        "type": "op",
+        "nb": "1",
+        "category": "shonen"
+    },
+    {
+        "id": "uMeR2W19wT0",
+        "anime": "Tokyo Ghoul",
+        "title": "Unravel",
+        "author": "Ling Tosite Sigure",
+        "type": "op",
+        "nb": "1",
+        "category": "shonen"
+    },
 
 ];
 

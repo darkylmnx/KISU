@@ -22,13 +22,15 @@ export default function onYouTubeIframeAPIReady() {
       onReady: function() {
         loadNextVideo();
         currentTime();
-        duration();
       },
       onStateChange :function () {
         onPlayerStateChange();
       }
     }
+
+
   });
+
 }
 export function currentTime() {
     function updateTime() {
@@ -40,23 +42,10 @@ export function currentTime() {
     timeupdater = setInterval(updateTime, 1000);
 }
 
-export function onPlayerStateChange() {
-        console.log('j')
-}
 
-/*export function duration() {
-    function updateTime() {
-        var oldTime = videotime;
-        if(player && player.getDuration()) {
-            videotime = player.getDuration();
-            console.log(videotime);
-        }
-        if(videotime !== oldTime) {
-            onProgress(videotime);
-        }
-    }
-    timeupdaters = setInterval(updateTime, 1000);
-}*/
+
+
+
 
 var title = document.querySelector('#title');
 var anime = document.querySelector('#anime');
