@@ -29,7 +29,7 @@ $Big: 3rem;
 $Med: 2.4rem;
 $Reg: 2rem;
 $Sml: 1.8rem;
-$Norm: 1.4rem;
+$Norm: 1.2rem;
 $xSml: 1.0rem;
 
 // $var color -------------------------
@@ -82,20 +82,20 @@ input:focus {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	position: absolute;
 	left: -350px;
 	z-index: 4;
+	padding-left: 10px;
 	transition: all 0.5s ease;
 	&_title {
 		color: $red;
-		margin: 30px;
+		margin-bottom: 30px;
 		font-family: $Lato-Bld;
 		font-size: $Big;
 	}
 	&_subTitle {
 		color: #fff;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		font-family: $Lato;
 		font-size: $Reg;
 	}
@@ -104,8 +104,11 @@ input:focus {
 		font-family: $Lato-Lgh;
 		font-size: $Norm;
 		font-style: italic;
-		margin: 0 30px 15px 30px;
+		margin: 0 30px 15px 0;
 		line-height: 1.2;
+	}
+	&_last_text{
+		margin-bottom: 62px;
 	}
 	&_link {
 		color: $red;
@@ -137,7 +140,7 @@ input:focus {
 
 	}
 	&_items {
-		margin: 0 30px 15px 30px;
+		margin: 0 30px 15px 0;
 		text-align: left;
 	}
 	&_item {
@@ -228,7 +231,7 @@ input:focus {
 			font-family: $Lato;
       padding: 5px;
       margin: 0 10px 0 0;
-			border-radius: 5px;
+	  border-radius: 5px;
       text-transform: uppercase;
       font-size: $xSml;
     }
@@ -436,7 +439,7 @@ input:focus {
 		}
 		&_button {
 			color: #fff;
-			border: 2px #fff solid;
+			border: 0;
 			padding: 5px 10px;
 			margin-right: 5px;
 			font-size: $xSml;
@@ -454,7 +457,7 @@ input:focus {
 		}
 		&_button {
 			color: #fff;
-			border: 2px #fff solid;
+			border: 0;
 			padding: 5px 10px;
 			margin-right: 5px;
 			font-size: $xSml;
