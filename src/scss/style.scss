@@ -15,11 +15,12 @@
 	font-family: "Farsan-Regular";
     src: url('../assets/fonts/Farsan-Regular.ttf');
 }
+
+// $var font-family -------------------
 $Farsan: "Farsan-Regular";
 $Lato: "Lato-Regular";
 $Lato-Lgh: "Lato-Light";
 $Lato-Bld: "Lato-Bold";
-
 
 // $var font-size ---------------------
 $xxBig: 7.2rem;
@@ -32,10 +33,12 @@ $Norm: 1.4rem;
 $xSml: 1.0rem;
 
 // $var color -------------------------
-$red: #ffd772;
-$dRed: #3F0000;
-$opColor: #2E84FC;
-$enColor: #2EE28A;
+$red: #ff8282;
+$opColor: #007f7d;
+$enColor: #897e00;
+$snColor: #825f00;
+$siColor: #005282;
+$sjColor: #800087;
 
 // GLOBAL -----------------------------
 body {
@@ -87,7 +90,7 @@ input:focus {
 	&_title {
 		color: $red;
 		margin: 30px;
-		font-family: $Lato;
+		font-family: $Lato-Bld;
 		font-size: $Big;
 	}
 	&_subTitle {
@@ -102,6 +105,7 @@ input:focus {
 		font-size: $Norm;
 		font-style: italic;
 		margin: 0 30px 15px 30px;
+		line-height: 1.2;
 	}
 	&_link {
 		color: $red;
@@ -138,7 +142,7 @@ input:focus {
 	}
 	&_item {
 		color: #fff;
-		font-family: $Lato;
+		font-family: $Lato-Lgh;
 		font-size: $Norm;
 		margin-bottom: 10px;
 	}
@@ -491,26 +495,26 @@ input:focus {
 	}
 }
 .shonen {
-  background: #bacbff;
+  background: $snColor;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #bacbff;
+		color: $snColor;
 	}
 }
 .seinen {
-  background: #ffa100;
+  background: $siColor;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #ffa100;
+		color: $siColor;
 	}
 }
 .shojo {
-  background: #f284ff;
+  background: $sjColor;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #f284ff;
+		color: $sjColor;
 	}
 }
