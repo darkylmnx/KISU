@@ -7,9 +7,9 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="unmute">
             <rect id="Rectangle-7" fill-opacity="0" fill="#D8D8D8" fill-rule="nonzero" x="0" y="0" width="40" height="39.0243902"></rect>
-            <ellipse id="Oval" stroke="#FF4A4A" stroke-width="4" cx="25" cy="20" rx="13" ry="12.195122"></ellipse>
+            <ellipse id="Oval" stroke="#ff8282" stroke-width="4" cx="25" cy="20" rx="13" ry="12.195122"></ellipse>
             <rect id="Rectangle-6" fill="#404040" fill-rule="nonzero" x="24" y="2.92682927" width="5" height="35.1219512"></rect>
-            <polygon id="Combined-Shape" fill="#FF4A4A" fill-rule="nonzero" points="9.875 12.6829268 25.5 0.487804878 25.5 39.5121951 9.875 27.3170732 0 27.3170732 0 12.6829268"></polygon>
+            <polygon id="Combined-Shape" fill="#ff8282" fill-rule="nonzero" points="9.875 12.6829268 25.5 0.487804878 25.5 39.5121951 9.875 27.3170732 0 27.3170732 0 12.6829268"></polygon>
         </g>
     </g>
 </svg>

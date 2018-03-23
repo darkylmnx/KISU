@@ -7,9 +7,9 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="mute-anim">
             <rect id="Rectangle-7" fill-opacity="0" fill="#D8D8D8" fill-rule="nonzero" x="0" y="0" width="40" height="40"></rect>
-            <polygon id="Combined-Shape" fill="#FF4A4A" fill-rule="nonzero" points="9.875 13 25.5 0.5 25.5 40.5 9.875 28 0 28 0 13"></polygon>
-            <rect id="Rectangle" fill="#FF4A4A" transform="translate(32.717514, 20.500000) rotate(45.000000) translate(-32.717514, -20.500000) " x="30.7175144" y="13" width="4" height="15"></rect>
-            <rect id="Rectangle" fill="#FF4A4A" transform="translate(32.717514, 20.500000) rotate(-45.000000) translate(-32.717514, -20.500000) " x="30.7175144" y="13" width="4" height="15"></rect>
+            <polygon id="Combined-Shape" fill="#ff8282" fill-rule="nonzero" points="9.875 13 25.5 0.5 25.5 40.5 9.875 28 0 28 0 13"></polygon>
+            <rect id="Rectangle" fill="#ff8282" transform="translate(32.717514, 20.500000) rotate(45.000000) translate(-32.717514, -20.500000) " x="30.7175144" y="13" width="4" height="15"></rect>
+            <rect id="Rectangle" fill="#ff8282" transform="translate(32.717514, 20.500000) rotate(-45.000000) translate(-32.717514, -20.500000) " x="30.7175144" y="13" width="4" height="15"></rect>
         </g>
     </g>
 </svg>

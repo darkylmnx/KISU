@@ -15,11 +15,12 @@
 	font-family: "Farsan-Regular";
     src: url('../assets/fonts/Farsan-Regular.ttf');
 }
+
+// $var font-family -------------------
 $Farsan: "Farsan-Regular";
 $Lato: "Lato-Regular";
 $Lato-Lgh: "Lato-Light";
 $Lato-Bld: "Lato-Bold";
-
 
 // $var font-size ---------------------
 $xxBig: 7.2rem;
@@ -33,9 +34,11 @@ $xSml: 1.0rem;
 
 // $var color -------------------------
 $red: #ff8282;
-$dRed: #3F0000;
 $opColor: #007f7d;
 $enColor: #897e00;
+$snColor: #825f00;
+$siColor: #005282;
+$sjColor: #800087;
 
 // GLOBAL -----------------------------
 body {
@@ -492,26 +495,26 @@ input:focus {
 	}
 }
 .shonen {
-  background: #825f00;
+  background: $snColor;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #825f00;
+		color: $snColor;
 	}
 }
 .seinen {
-  background: #005282;
+  background: $siColor;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #005282
+		color: $siColor;
 	}
 }
 .shojo {
-  background: #800087;
+  background: $sjColor;
   color: #fff;
 	&:hover {
 		background: #fff;
-		color: #800087;
+		color: $sjColor;
 	}
 }
