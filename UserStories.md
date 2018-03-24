@@ -5,22 +5,22 @@
 ## ACTIONS
 
 ### dev
-- [ ] AAF i load **data** from the server (JSON videos)
-- [ ] AAF i load youtube player
-- [ ] AAF i chose an random video from the data
-- [ ] AAF i play the video chosen in the player
-- [ ] AFF i show the basic informations in the DOM
-- [ ] AFF i add events to control the player
+- [x] AAF i load **data** from the server (JSON videos)
+- [x] AAF i load youtube player
+- [x] AAF i chose an random video from the data
+- [x] AAF i play the video chosen in the player
+- [x] AFF i show the basic informations in the DOM
+- [x] AFF i add events to control the player
 
 ### client
-- [ ] AAV i can see a player when i arrive on the website
-- [ ] AAV i see in the player a random video
+- [x] AAV i can see a player when i arrive on the website
+- [x] AAV i see in the player a random video
 - [ ] AAV i can control the player :
-    - [ ] next / previous
-    - [ ] play / pause
-    - [ ] mute / unmute
-    - [ ] volume
-- AAV i can see the basic informations of the video (TO SEE)
+    - [x] next / previous
+    - [x] play / pause
+    - [x] mute / unmute
+    - [x] volume
+- [x] AAV i can see the basic informations of the video (TO SEE)
 
 
 ## PAYLOADS
@@ -39,7 +39,7 @@
 ]
 ```
 
-Later, we could add to the data the starting point : 
+Later, we could add to the data the starting point :
 https://developers.google.com/youtube/iframe_api_reference#Example_Video_Player_Constructors
 ```
 loadVideoById({'videoId': 'bHQqvYy5KYo',
