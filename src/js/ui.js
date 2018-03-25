@@ -16,7 +16,6 @@ var pauseBtn = document.querySelector('#pause');
 var nextBtn = document.querySelector('#next');
 var prevBtn = document.querySelector('#previous');
 
-
 muteBtn.addEventListener('click', function() {
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
@@ -61,27 +60,28 @@ plusBtn.addEventListener('click', function() {
 
 });
 team.addEventListener('click', function() {
-  about.classList.toggle('is-scaled');
+  about.classList.toggle('toLeft');
 });
 
 // SEARCH -----------------------------
 var burger = document.querySelector('.header_menu');
 var search = document.querySelector('.search');
 burger.addEventListener('click', function() {
-  search.classList.toggle('not-hidden');
+  search.classList.toggle('toRight');
 
 });
 
-var overlay = document.querySelector('.aoe-player_overlay');
 var infos = document.querySelector('.infos');
+var overlay = document.querySelector('.aoe-player_overlay');
 overlay.addEventListener('click', function() {
-  about.classList.remove('is-scaled');
-  search.classList.remove('not-hidden');
+  about.classList.remove('toLeft');
+  search.classList.remove('toRight');
 });
 overlay.addEventListener('mousemove', function() {
   overlay.style.background = "rgba(0,0,0,0.75)";
   infos.classList.remove('disappear');
 });
+
 document.onmousemove = (function() {
   var onmousestop = function() {
     overlay.style.background = "";

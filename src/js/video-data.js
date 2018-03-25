@@ -664,15 +664,15 @@ window.playlist = [{
         "nb": "1",
         "category": "shonen"
     },
-    {
-        "id": "Hk_159KYwZQ",
-        "anime": "Monogatari II",
-        "title": "chocolate insomnia",
-        "author": "Tsubasa Hanekawa",
-        "type": "op",
-        "nb": "1",
-        "category": "shonen"
-    },
+    // {
+    //     "id": "Hk_159KYwZQ",
+    //     "anime": "Monogatari II",
+    //     "title": "chocolate insomnia",
+    //     "author": "Tsubasa Hanekawa",
+    //     "type": "op",
+    //     "nb": "1",
+    //     "category": "shonen"
+    // },
     {
         "id": "tf7iIAdosGQ",
         "anime": "Monogatari II",

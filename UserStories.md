@@ -26,14 +26,15 @@
 ## PAYLOADS
 
 ### Data
-```
+```Javascript
 [
     {
         "id": "id of youtube",
+        "anime": "name of anime",
         "title": "name of opening",
         "author": "name of the song author",
-        "anime": "anime's name",
         "type": "opening || ending",
+        "nb": "number of opening || ending",
         "category": "seinen || shonen || shojo"
     }
 ]
@@ -41,7 +42,7 @@
 
 Later, we could add to the data the starting point :
 https://developers.google.com/youtube/iframe_api_reference#Example_Video_Player_Constructors
-```
+```Javascript
 loadVideoById({'videoId': 'bHQqvYy5KYo',
                'startSeconds': 5,
                'endSeconds': 60,
