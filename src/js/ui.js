@@ -5,7 +5,14 @@ import {
     loadNextVideo,
     loadPrevVideo,
     playVideo,
-    pauseVideo, autorunVideo, player
+    pauseVideo,
+    autorunVideo,
+    player,
+    opFilter,
+    enFilter,
+    seinenFilter,
+    shonenFilter,
+    shojoFilter
 } from './yt-loader';
 
 // PLAYER BUTTONS ---------------------
@@ -47,6 +54,55 @@ nextBtn.addEventListener('click', function() {
   renderUI(video);
   playBtn.classList.remove('is-active');
   pauseBtn.classList.add('is-active');
+});
+
+
+// FILTERS BUTTONS --------------------
+var opBtn = document.querySelector('#op');
+var enBtn = document.querySelector('#en');
+var seinenBtn = document.querySelector('#seinen');
+var shonenBtn = document.querySelector('#shonen');
+var shojoBtn = document.querySelector('#shojo');
+
+opBtn.addEventListener('click', function() {
+  opBtn.classList.toggle('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
+  opFilter();
+});
+enBtn.addEventListener('click', function() {
+  opBtn.classList.remove('bordered');
+  enBtn.classList.toggle('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
+  enFilter();
+});
+seinenBtn.addEventListener('click', function() {
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.toggle('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
+  seinenFilter();
+});
+shonenBtn.addEventListener('click', function() {
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.toggle('bordered');
+  shojoBtn.classList.remove('bordered');
+  shonenFilter();
+});
+shojoBtn.addEventListener('click', function() {
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.toggle('bordered');
+  shojoFilter();
 });
 
 // MORE -------------------------------
@@ -93,8 +149,6 @@ document.onmousemove = (function() {
     thread = setTimeout(onmousestop, 3000);
   };
 })();
-
-
 
 function renderUI(video) {
     // update the ui

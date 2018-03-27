@@ -65,6 +65,11 @@ input:focus {
 .disappear {
 	opacity: 0 !important;
 }
+.bordered {
+	border: 2px $red solid !important;
+	color: $red !important;
+	background: #fff !important;
+}
 .rotate {
 	top: 50% !important;
 	transform: translate(0, -50%) rotate(135deg);
@@ -445,6 +450,7 @@ input:focus {
 			font-size: $xSml;
 			cursor: pointer;
 			transition: all 0.3s ease;
+			border: 2px transparent solid;
 		}
 	}
 	&_category {
@@ -463,6 +469,7 @@ input:focus {
 			font-size: $xSml;
 			cursor: pointer;
 			transition: all 0.3s ease;
+			border: 2px transparent solid;
 		}
 	}
 }
