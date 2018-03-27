@@ -56,6 +56,29 @@ nextBtn.addEventListener('click', function() {
   pauseBtn.classList.add('is-active');
 });
 
+document.addEventListener('keydown', function() {
+  if (event.which === 32) {
+    if (player.getPlayerState() === 2) {
+      playBtn.classList.toggle('is-active');
+      pauseBtn.classList.toggle('is-active');
+      playVideo();
+    } else {
+      playBtn.classList.toggle('is-active');
+      pauseBtn.classList.toggle('is-active');
+      pauseVideo();
+    }
+  }
+  else if (event.which === 39) {
+    loadNextVideo();
+  }
+  else if (event.which === 37) {
+    loadPrevVideo();
+  }
+  else if (event.which === 27) {
+    about.classList.remove('toLeft');
+    search.classList.remove('toRight');
+  }
+})
 
 // FILTERS BUTTONS --------------------
 var opBtn = document.querySelector('#op');
