@@ -1255,7 +1255,7 @@
             "category": "seinen"
         },
         {
-            "id": "SwwKBQUMP-0",
+            "id": "jX0gZ59-LUs",
             "anime": "Death Note",
             "title": "Alumina",
             "author": "NIGHTMARE",

@@ -34,11 +34,12 @@ $xSml: 1.0rem;
 
 // $var color -------------------------
 $red: #ff8282;
-$opColor: #007f7d;
-$enColor: #897e00;
-$snColor: #825f00;
-$siColor: #005282;
-$sjColor: #800087;
+$opColor: #4ae0c9;
+$enColor: #ff9900;
+$snColor: #6b94d6;
+$siColor: #6fe29f;
+$sjColor: #e06dd8;
+$mkColor: #b72121;
 
 // GLOBAL -----------------------------
 body {
@@ -86,17 +87,17 @@ input:focus {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	position: absolute;
 	left: -350px;
 	z-index: 4;
-	padding-left: 10px;
 	transition: all 0.5s ease;
 	&_title {
 		color: $red;
 		margin-bottom: 30px;
 		font-family: $Lato-Bld;
 		font-size: $Big;
+		padding: 25px 25px 0;
 	}
 	&_subTitle {
 		color: #fff;
@@ -109,7 +110,7 @@ input:focus {
 		font-family: $Lato-Lgh;
 		font-size: $Norm;
 		font-style: italic;
-		margin: 0 30px 15px 0;
+		padding: 25px 25px 0;
 		line-height: 1.2;
 	}
 	&_last_text{
@@ -144,7 +145,7 @@ input:focus {
 		}
 	}
 	&_items {
-		margin: 0 30px 15px 0;
+		padding: 15px 25px 0;
 		text-align: left;
 	}
 	&_item {
@@ -152,6 +153,24 @@ input:focus {
 		font-family: $Lato-Lgh;
 		font-size: $Norm;
 		margin-bottom: 10px;
+	}
+	&_yt {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		bottom: 25px;
+
+		padding: 25px 25px 0;
+		&_text {
+			color: #fff;
+			font-family: $Lato;
+			font-size: $xSml;
+			width: 210px;
+		}
+		&_img {
+			width: 75px;
+			height: auto;
+		}
 	}
 }
 
@@ -380,6 +399,7 @@ input:focus {
 	background: url('../assets/imgs/icons/plus.svg') no-repeat center;
 	background-size: 20px 20px;
 	transition: all 0.3s ease;
+	width: 50px;
 	&:hover {
 		background: url('../assets/imgs/icons/plus-anim.svg') no-repeat center;
 		background-size: 20px 20px;
@@ -407,7 +427,7 @@ input:focus {
 	transition: all 0.5s ease-out;
 	&_title {
 		color: $red;
-		font-family: $Lato;
+		font-family: $Lato-Bld;
 		font-size: $Big;
 		margin-bottom: 50px;
 		padding: 25px 25px 0;
@@ -443,7 +463,7 @@ input:focus {
 			margin-bottom: 10px;
 		}
 		&_button {
-			color: #fff;
+			color: #000;
 			border: 0;
 			padding: 5px 10px;
 			margin-right: 5px;
@@ -462,7 +482,7 @@ input:focus {
 			margin-bottom: 10px;
 		}
 		&_button {
-			color: #fff;
+			color: #000;
 			border: 0;
 			padding: 5px 10px;
 			margin-right: 5px;
@@ -490,7 +510,7 @@ input:focus {
 }
 .op {
 	background: $opColor;
-	color: #fff;
+	color: #000;
 	&:hover {
 		background: #fff;
 		color: $opColor;
@@ -498,7 +518,7 @@ input:focus {
 }
 .en {
 	background: $enColor;
-	color: #fff;
+	color: #000;
 	&:hover {
 		background: #fff;
 		color: $enColor;
@@ -506,7 +526,7 @@ input:focus {
 }
 .shonen {
   background: $snColor;
-  color: #fff;
+  color: #000;
 	&:hover {
 		background: #fff;
 		color: $snColor;
@@ -514,7 +534,7 @@ input:focus {
 }
 .seinen {
   background: $siColor;
-  color: #fff;
+  color: #000;
 	&:hover {
 		background: #fff;
 		color: $siColor;
@@ -522,7 +542,7 @@ input:focus {
 }
 .shojo {
   background: $sjColor;
-  color: #fff;
+  color: #000;
 	&:hover {
 		background: #fff;
 		color: $sjColor;
