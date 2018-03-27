@@ -57,6 +57,24 @@ nextBtn.addEventListener('click', function() {
 });
 
 document.addEventListener('keydown', function() {
+  if (event.which === 39) {
+    loadNextVideo();
+    playBtn.classList.remove('is-active');
+    pauseBtn.classList.add('is-active');
+    overlay.style.background = "rgba(0,0,0,0.75)";
+    infos.classList.remove('disappear');
+  }
+});
+document.addEventListener('keydown', function() {
+  if (event.which === 37) {
+    loadPrevVideo();
+    playBtn.classList.remove('is-active');
+    pauseBtn.classList.add('is-active');
+    overlay.style.background = "rgba(0,0,0,0.75)";
+    infos.classList.remove('disappear');
+  }
+})
+document.addEventListener('keydown', function() {
   if (event.which === 32) {
     if (player.getPlayerState() === 2) {
       playBtn.classList.toggle('is-active');
@@ -68,18 +86,7 @@ document.addEventListener('keydown', function() {
       pauseVideo();
     }
   }
-  else if (event.which === 39) {
-    loadNextVideo();
-  }
-  else if (event.which === 37) {
-    loadPrevVideo();
-  }
-  else if (event.which === 27) {
-    about.classList.remove('toLeft');
-    search.classList.remove('toRight');
-  }
 })
-
 // FILTERS BUTTONS --------------------
 var opBtn = document.querySelector('#op');
 var enBtn = document.querySelector('#en');
@@ -160,6 +167,12 @@ overlay.addEventListener('mousemove', function() {
   overlay.style.background = "rgba(0,0,0,0.75)";
   infos.classList.remove('disappear');
 });
+document.addEventListener('keydown', function() {
+  if (event.which === 27) {
+    about.classList.remove('toLeft');
+    search.classList.remove('toRight');
+  }
+})
 
 document.onmousemove = (function() {
   var onmousestop = function() {
