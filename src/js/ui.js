@@ -5,7 +5,14 @@ import {
     loadNextVideo,
     loadPrevVideo,
     playVideo,
-    pauseVideo, autorunVideo, player
+    pauseVideo,
+    autorunVideo,
+    player,
+    opFilter,
+    enFilter,
+    seinenFilter,
+    shonenFilter,
+    shojoFilter
 } from './yt-loader';
 
 // PLAYER BUTTONS ---------------------
@@ -15,7 +22,6 @@ var playBtn = document.querySelector('#play');
 var pauseBtn = document.querySelector('#pause');
 var nextBtn = document.querySelector('#next');
 var prevBtn = document.querySelector('#previous');
-
 
 muteBtn.addEventListener('click', function() {
   muteBtn.classList.toggle('is-active');
@@ -50,6 +56,85 @@ nextBtn.addEventListener('click', function() {
   pauseBtn.classList.add('is-active');
 });
 
+document.addEventListener('keydown', function() {
+  if (event.which === 39) {
+    loadNextVideo();
+    playBtn.classList.remove('is-active');
+    pauseBtn.classList.add('is-active');
+    overlay.style.background = "rgba(0,0,0,0.75)";
+    infos.classList.remove('disappear');
+  }
+});
+document.addEventListener('keydown', function() {
+  if (event.which === 37) {
+    loadPrevVideo();
+    playBtn.classList.remove('is-active');
+    pauseBtn.classList.add('is-active');
+    overlay.style.background = "rgba(0,0,0,0.75)";
+    infos.classList.remove('disappear');
+  }
+})
+document.addEventListener('keydown', function() {
+  if (event.which === 32) {
+    if (player.getPlayerState() === 2) {
+      playBtn.classList.toggle('is-active');
+      pauseBtn.classList.toggle('is-active');
+      playVideo();
+    } else {
+      playBtn.classList.toggle('is-active');
+      pauseBtn.classList.toggle('is-active');
+      pauseVideo();
+    }
+  }
+})
+// FILTERS BUTTONS --------------------
+var opBtn = document.querySelector('#op');
+var enBtn = document.querySelector('#en');
+var seinenBtn = document.querySelector('#seinen');
+var shonenBtn = document.querySelector('#shonen');
+var shojoBtn = document.querySelector('#shojo');
+
+opBtn.addEventListener('click', function() {
+  opBtn.classList.toggle('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
+  opFilter();
+});
+enBtn.addEventListener('click', function() {
+  opBtn.classList.remove('bordered');
+  enBtn.classList.toggle('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
+  enFilter();
+});
+seinenBtn.addEventListener('click', function() {
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.toggle('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
+  seinenFilter();
+});
+shonenBtn.addEventListener('click', function() {
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.toggle('bordered');
+  shojoBtn.classList.remove('bordered');
+  shonenFilter();
+});
+shojoBtn.addEventListener('click', function() {
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.toggle('bordered');
+  shojoFilter();
+});
+
 // MORE -------------------------------
 var plusBtn = document.querySelector('#plus');
 var moreInfos = document.querySelector('.moreInfos');
@@ -61,27 +146,34 @@ plusBtn.addEventListener('click', function() {
 
 });
 team.addEventListener('click', function() {
-  about.classList.toggle('is-scaled');
+  about.classList.toggle('toLeft');
 });
 
 // SEARCH -----------------------------
 var burger = document.querySelector('.header_menu');
 var search = document.querySelector('.search');
 burger.addEventListener('click', function() {
-  search.classList.toggle('not-hidden');
+  search.classList.toggle('toRight');
 
 });
 
-var overlay = document.querySelector('.aoe-player_overlay');
 var infos = document.querySelector('.infos');
+var overlay = document.querySelector('.aoe-player_overlay');
 overlay.addEventListener('click', function() {
-  about.classList.remove('is-scaled');
-  search.classList.remove('not-hidden');
+  about.classList.remove('toLeft');
+  search.classList.remove('toRight');
 });
 overlay.addEventListener('mousemove', function() {
   overlay.style.background = "rgba(0,0,0,0.75)";
   infos.classList.remove('disappear');
 });
+document.addEventListener('keydown', function() {
+  if (event.which === 27) {
+    about.classList.remove('toLeft');
+    search.classList.remove('toRight');
+  }
+})
+
 document.onmousemove = (function() {
   var onmousestop = function() {
     overlay.style.background = "";
@@ -93,8 +185,6 @@ document.onmousemove = (function() {
     thread = setTimeout(onmousestop, 3000);
   };
 })();
-
-
 
 function renderUI(video) {
     // update the ui

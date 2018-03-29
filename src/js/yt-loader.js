@@ -27,10 +27,7 @@ export default function onYouTubeIframeAPIReady() {
         onPlayerStateChange();
       }
     }
-
-
   });
-
 }
 export function currentTime() {
     function updateTime() {
@@ -42,11 +39,6 @@ export function currentTime() {
     timeupdater = setInterval(updateTime, 1000);
 }
 
-
-
-
-
-
 var title = document.querySelector('#title');
 var anime = document.querySelector('#anime');
 var author = document.querySelector('#author');
@@ -55,22 +47,21 @@ var category = document.querySelector('#category');
 var infosType = document.querySelector('.infos_tags_type');
 var infosCategory = document.querySelector('.infos_tags_tag');
 
+// BUTTONS FUNCTIONS ------------------
 export function muteVideo(){
   player.unMute();
-}
-
+};
 export function unmuteVideo(){
   player.mute();
-}
-
+};
 export function playVideo(){
   player.playVideo();
-}
-
+};
 export function pauseVideo(){
   player.pauseVideo();
-}
+};
 
+// LOAD PREV/NEXT INFOS VIDEO FUNCTIONS
 export function loadNextVideo() {
   var video = getNextVideo();
   player.loadVideoById(video.id);
@@ -141,3 +132,20 @@ export function loadPrevVideo(){
   }
   return video;
 }
+
+// FILTER FUNCTIONS -------------------
+export function opFilter(){
+
+};
+export function enFilter(){
+
+};
+export function seinenFilter(){
+
+};
+export function shonenFilter(){
+
+};
+export function shojoFilter(){
+
+};

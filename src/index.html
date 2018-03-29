@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/imgs/icons/icon.png" />
-    <title>kisu</title>
+    <title>kisu, your free op/en anime radio.</title>
 </head>
 <body>
   <section class="about">
     <h3 class="about_title">About us !</h3>
     <p class="about_text">Kisu is a visual radio that showcases anime openings and endings.</p>
-    <p class="about_text about_last_text">This project was imaginated by our Javascript teacher, <a href="http://otakod.es" class="about_link">Ariel-sensei</a>.</p>
+    <p class="about_text about_last_text">This project was imaginated by our Javascript teacher, <a href="http://otakod.es" class="about_link" target="blank_">Ariel-sensei</a>.</p>
 
     <ul class="about_items">
       <h4 class="about_subTitle">Our team :</h4>
-      <li class="about_item"><a href="" class="about_link">Ariel-sensei</a>, our master</li>
-      <li class="about_item"><a href="#" class="about_link">Marie-chan</a>, our graphic designer</li>
-      <li class="about_item"><a href="#" class="about_link">Alex-kun</a>, our lead front-end</li>
-      <li class="about_item"><a href="#" class="about_link">Enzo-kun</a>, our JS developper</li>
-      <li class="about_item"><a href="#" class="about_link">Mayeul-kun</a>, our designer</li>
+      <li class="about_item"><a href="https://github.com/darkylmnx" class="about_link" target="blank_">Ariel-sensei</a>, our master</li>
+      <li class="about_item"><a href="https://www.behance.net/mariete6188" class="about_link" target="blank_">Marie-chan</a>, our graphic designer</li>
+      <li class="about_item"><a href="https://github.com/ShAd0wInK" class="about_link" target="blank_">Alex-kun</a>, our lead front-end</li>
+      <li class="about_item"><a href="https://github.com/Draktors" class="about_link" target="blank_">Enzo-kun</a>, our JS developper</li>
+      <li class="about_item"><a href="https://github.com/MayeulCROGUENNEC" class="about_link" target="blank_">Mayeul-kun</a>, our designer</li>
     </ul>
+    <div class="about_yt">
+      <p class="about_yt_text">All videos are the proprety of </p>
+      <img src="assets/imgs/icons/youtube.svg" alt="" class="about_yt_img">
+    </div>
   </section>
   <header class="header">
     <div class="header_title">
@@ -67,22 +71,31 @@
 
   </section>
   <section class="search">
+<<<<<<< HEAD
     <h4 class="search_title">Filter</h4>
+=======
+    <h4 class="search_title">Search</h4>
+    <!-- <div class="search_inputBox">
+      <input type="text" class="search_inputBox_input">
+      <img src="assets/imgs/icons/search-anim.svg" alt="" class="search_inputBox_img">
+    </div> -->
+>>>>>>> 2384b510a5895e87166597eca322ebcd9a27f98a
     <div class="search_type">
       <h5 class="search_type_title">Type :</h5>
       <div class="search_type_buttons">
-        <button class="search_type_button op">OP</button>
-        <button class="search_type_button en ">EN</button>
+        <button class="search_type_button op" id="op">OP</button>
+        <button class="search_type_button en " id="en">EN</button>
       </div>
     </div>
     <div class="search_category">
       <h5 class="search_category_title">Category :</h5>
       <div class="search_category_buttons">
-        <button class="search_category_button seinen">SEINEN</button>
-        <button class="search_category_button shonen">SHONEN</button>
-        <button class="search_category_button shojo">SHOJÔ</button>
+        <button class="search_category_button seinen" id="seinen">SEINEN</button>
+        <button class="search_category_button shonen" id="shonen">SHONEN</button>
+        <button class="search_category_button shojo" id="shojo">SHOJÔ</button>
       </div>
     </div>
+    <img src="assets/imgs/kisugif.gif" alt="" class="search_gif">
   </section>
     <script>
         var tag = document.createElement('script');
