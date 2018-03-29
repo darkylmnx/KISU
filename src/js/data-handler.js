@@ -20,6 +20,21 @@ export function getNextVideo() {
 
     return current_video;
 }
+export function edfilter() {
+    if(current_video !== undefined){
+        memo_video.push(current_video);
+    }
+    current_video = playlist2[ getRandom(playlist2) ];
+    playlist2 = playlist2.filter(function (data) {
+        return data.id !== current_video.id && data.type === 'ed';
+    });
+
+    if (playlist2.length === 0) {
+        playlist2 = playlist.slice();
+    }
+
+    return current_video;
+}
 
 
 function getRandom(list) {
