@@ -396,23 +396,25 @@ input:focus {
 	}
 }
 #plus {
+	width: 30px;
 	background: url('../assets/imgs/icons/plus.svg') no-repeat center;
 	background-size: 20px 20px;
 	transition: all 0.3s ease;
-	width: 50px;
 	&:hover {
+		width: 30px;
 		background: url('../assets/imgs/icons/plus-anim.svg') no-repeat center;
 		background-size: 20px 20px;
 	}
 }
 #team {
-	width: 50px;
-	background: url('../assets/imgs/icons/group.svg') no-repeat center;
-	background-size: 40px 40px;
+	width: 30px;
+	background: url('../assets/imgs/icons/svg.svg') no-repeat center;
+	background-size: 20px 20px;
 	transition: all 0.3s ease;
 	&:hover {
-		background: url('../assets/imgs/icons/group-anim.svg') no-repeat center;
-		background-size: 40px 40px;
+		width: 30px;
+		background: url('../assets/imgs/icons/svg-anim.svg') no-repeat center;
+		background-size: 20px 20px;
 	}
 }
 
