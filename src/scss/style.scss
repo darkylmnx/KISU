@@ -494,6 +494,14 @@ input:focus {
 			border: 2px transparent solid;
 		}
 	}
+	&_gif {
+		width: auto;
+		height: 200px;
+		position: absolute;
+		left: 50%;
+		bottom: 50px;
+		transform: translate(-50%, 0);
+	}
 }
 
 // ------------------
