@@ -395,18 +395,18 @@ input:focus {
 		background-size: 20px 20px;
 	}
 }
-#plus {
+#search {
 	width: 30px;
-	background: url('../assets/imgs/icons/plus.svg') no-repeat center;
+	background: url('../assets/imgs/icons/search.svg') no-repeat center;
 	background-size: 20px 20px;
 	transition: all 0.3s ease;
 	&:hover {
 		width: 30px;
-		background: url('../assets/imgs/icons/plus-anim.svg') no-repeat center;
+		background: url('../assets/imgs/icons/search-anim.svg') no-repeat center;
 		background-size: 20px 20px;
 	}
 }
-#team {
+#about {
 	width: 30px;
 	background: url('../assets/imgs/icons/svg.svg') no-repeat center;
 	background-size: 20px 20px;

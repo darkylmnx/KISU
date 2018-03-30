@@ -48,23 +48,44 @@ var infosType = document.querySelector('.infos_tags_type');
 var infosCategory = document.querySelector('.infos_tags_tag');
 
 // BUTTONS FUNCTIONS ------------------
+
+var playBtn = document.querySelector('#play');
+var pauseBtn = document.querySelector('#pause');
+var muteBtn = document.querySelector('#mute');
+var unmuteBtn = document.querySelector('#unmute');
+
 export function muteVideo(){
+  muteBtn.classList.toggle('is-active');
+  unmuteBtn.classList.toggle('is-active');
   player.unMute();
 };
 export function unmuteVideo(){
+  muteBtn.classList.toggle('is-active');
+  unmuteBtn.classList.toggle('is-active');
   player.mute();
 };
 export function playVideo(){
+  playBtn.classList.remove('is-active');
+  pauseBtn.classList.add('is-active');
   player.playVideo();
 };
 export function pauseVideo(){
+  playBtn.classList.add('is-active');
+  pauseBtn.classList.remove('is-active');
   player.pauseVideo();
 };
 
 // LOAD PREV/NEXT INFOS VIDEO FUNCTIONS
+var infos = document.querySelector('.infos');
+var overlay = document.querySelector('.aoe-player_overlay');
+
 export function loadNextVideo() {
   var video = getNextVideo();
   player.loadVideoById(video.id);
+  overlay.style.background = "rgba(0,0,0,0.75)";
+  infos.classList.remove('disappear');
+  playBtn.classList.toggle('is-active');
+  pauseBtn.classList.toggle('is-active');
   title.innerHTML = video.title;
   anime.innerHTML = video.anime;
   author.innerHTML = video.author;
@@ -98,6 +119,10 @@ export function loadNextVideo() {
   return video;
 }
 export function loadPrevVideo(){
+  overlay.style.background = "rgba(0,0,0,0.75)";
+  infos.classList.remove('disappear');
+  playBtn.classList.toggle('is-active');
+  pauseBtn.classList.toggle('is-active');
   var video = getPrevVideo();
   player.loadVideoById(video.id);
   title.innerHTML = video.title;
@@ -134,18 +159,44 @@ export function loadPrevVideo(){
 }
 
 // FILTER FUNCTIONS -------------------
-export function opFilter(){
+var opBtn = document.querySelector('#op');
+var enBtn = document.querySelector('#en');
+var seinenBtn = document.querySelector('#seinen');
+var shonenBtn = document.querySelector('#shonen');
+var shojoBtn = document.querySelector('#shojo');
 
+export function opFilter(){
+  opBtn.classList.toggle('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
 };
 export function enFilter(){
-
+  opBtn.classList.remove('bordered');
+  enBtn.classList.toggle('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
 };
 export function seinenFilter(){
-
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.toggle('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
 };
 export function shonenFilter(){
-
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.toggle('bordered');
+  shojoBtn.classList.remove('bordered');
 };
 export function shojoFilter(){
-
+  opBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.toggle('bordered');
 };

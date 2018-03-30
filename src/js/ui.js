@@ -24,65 +24,41 @@ var nextBtn = document.querySelector('#next');
 var prevBtn = document.querySelector('#previous');
 
 muteBtn.addEventListener('click', function() {
-  muteBtn.classList.toggle('is-active');
-  unmuteBtn.classList.toggle('is-active');
   unmuteVideo();
 });
 unmuteBtn.addEventListener('click', function() {
-  muteBtn.classList.toggle('is-active');
-  unmuteBtn.classList.toggle('is-active');
   muteVideo();
 });
 playBtn.addEventListener('click', function() {
-  playBtn.classList.toggle('is-active');
-  pauseBtn.classList.toggle('is-active');
   playVideo();
 });
 pauseBtn.addEventListener('click', function() {
-  playBtn.classList.toggle('is-active');
-  pauseBtn.classList.toggle('is-active');
   pauseVideo();
 });
 prevBtn.addEventListener('click', function() {
   var video = loadPrevVideo();
   renderUI(video);
-  playBtn.classList.remove('is-active');
-  pauseBtn.classList.add('is-active');
 });
 nextBtn.addEventListener('click', function() {
   var video = loadNextVideo();
   renderUI(video);
-  playBtn.classList.remove('is-active');
-  pauseBtn.classList.add('is-active');
 });
 
 document.addEventListener('keydown', function() {
   if (event.which === 39) {
     loadNextVideo();
-    playBtn.classList.remove('is-active');
-    pauseBtn.classList.add('is-active');
-    overlay.style.background = "rgba(0,0,0,0.75)";
-    infos.classList.remove('disappear');
   }
 });
 document.addEventListener('keydown', function() {
   if (event.which === 37) {
     loadPrevVideo();
-    playBtn.classList.remove('is-active');
-    pauseBtn.classList.add('is-active');
-    overlay.style.background = "rgba(0,0,0,0.75)";
-    infos.classList.remove('disappear');
   }
 })
 document.addEventListener('keydown', function() {
   if (event.which === 32) {
     if (player.getPlayerState() === 2) {
-      playBtn.classList.toggle('is-active');
-      pauseBtn.classList.toggle('is-active');
       playVideo();
     } else {
-      playBtn.classList.toggle('is-active');
-      pauseBtn.classList.toggle('is-active');
       pauseVideo();
     }
   }
@@ -95,77 +71,39 @@ var shonenBtn = document.querySelector('#shonen');
 var shojoBtn = document.querySelector('#shojo');
 
 opBtn.addEventListener('click', function() {
-  opBtn.classList.toggle('bordered');
-  enBtn.classList.remove('bordered');
-  seinenBtn.classList.remove('bordered');
-  shonenBtn.classList.remove('bordered');
-  shojoBtn.classList.remove('bordered');
   opFilter();
 });
 enBtn.addEventListener('click', function() {
-  opBtn.classList.remove('bordered');
-  enBtn.classList.toggle('bordered');
-  seinenBtn.classList.remove('bordered');
-  shonenBtn.classList.remove('bordered');
-  shojoBtn.classList.remove('bordered');
   enFilter();
 });
 seinenBtn.addEventListener('click', function() {
-  opBtn.classList.remove('bordered');
-  enBtn.classList.remove('bordered');
-  seinenBtn.classList.toggle('bordered');
-  shonenBtn.classList.remove('bordered');
-  shojoBtn.classList.remove('bordered');
   seinenFilter();
 });
 shonenBtn.addEventListener('click', function() {
-  opBtn.classList.remove('bordered');
-  enBtn.classList.remove('bordered');
-  seinenBtn.classList.remove('bordered');
-  shonenBtn.classList.toggle('bordered');
-  shojoBtn.classList.remove('bordered');
   shonenFilter();
 });
 shojoBtn.addEventListener('click', function() {
-  opBtn.classList.remove('bordered');
-  enBtn.classList.remove('bordered');
-  seinenBtn.classList.remove('bordered');
-  shonenBtn.classList.remove('bordered');
-  shojoBtn.classList.toggle('bordered');
   shojoFilter();
 });
 
-// MORE -------------------------------
-var plusBtn = document.querySelector('#plus');
-var moreInfos = document.querySelector('.moreInfos');
-var team = document.querySelector('#team');
+// ABOUT / SEARCH -----------------------------
+var aboutBtn = document.querySelector('#about');
 var about = document.querySelector('.about');
-
-plusBtn.addEventListener('click', function() {
-  moreInfos.classList.toggle('is-visible');
-
-});
-team.addEventListener('click', function() {
-  about.classList.toggle('toLeft');
-});
-
-// SEARCH -----------------------------
-var burger = document.querySelector('.header_menu');
+var searchBtn = document.querySelector('#search');
 var search = document.querySelector('.search');
-burger.addEventListener('click', function() {
-  search.classList.toggle('toRight');
-
-});
-
 var infos = document.querySelector('.infos');
 var overlay = document.querySelector('.aoe-player_overlay');
+
+aboutBtn.addEventListener('click', function() {
+  about.classList.toggle('toLeft');
+});
+searchBtn.addEventListener('click', function() {
+  search.classList.toggle('toRight');
+});
+
 overlay.addEventListener('click', function() {
   about.classList.remove('toLeft');
   search.classList.remove('toRight');
-});
-overlay.addEventListener('mousemove', function() {
-  overlay.style.background = "rgba(0,0,0,0.75)";
-  infos.classList.remove('disappear');
 });
 document.addEventListener('keydown', function() {
   if (event.which === 27) {
@@ -174,12 +112,15 @@ document.addEventListener('keydown', function() {
   }
 })
 
+overlay.addEventListener('mousemove', function() {
+  overlay.style.background = "rgba(0,0,0,0.75)";
+  infos.classList.remove('disappear');
+});
 document.onmousemove = (function() {
   var onmousestop = function() {
     overlay.style.background = "";
     infos.classList.add('disappear');
   }, thread;
-
   return function() {
     clearTimeout(thread);
     thread = setTimeout(onmousestop, 3000);
