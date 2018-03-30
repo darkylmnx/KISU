@@ -53,7 +53,7 @@ document.addEventListener('keydown', function() {
   if (event.which === 37) {
     loadPrevVideo();
   }
-})
+});
 document.addEventListener('keydown', function() {
   if (event.which === 32) {
     if (player.getPlayerState() === 2) {
@@ -62,7 +62,7 @@ document.addEventListener('keydown', function() {
       pauseVideo();
     }
   }
-})
+});
 // FILTERS BUTTONS --------------------
 var opBtn = document.querySelector('#op');
 var enBtn = document.querySelector('#en');
@@ -110,7 +110,7 @@ document.addEventListener('keydown', function() {
     about.classList.remove('toLeft');
     search.classList.remove('toRight');
   }
-})
+});
 
 overlay.addEventListener('mousemove', function() {
   overlay.style.background = "rgba(0,0,0,0.75)";

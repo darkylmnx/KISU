@@ -16,8 +16,31 @@ export function getNextVideo() {
     if (playlist2.length === 0) {
         playlist2 = playlist.slice();
     }
+
     return current_video;
 }
+
+export function edfilter() {
+
+    playlist2 = playlist2.filter(function (data) {
+        return data.id !== current_video.id && data.type === 'ed';
+    });
+    current_video = playlist2[ getRandom(playlist2) ];
+    console.log(playlist2);
+    return current_video;
+}
+
+
+export function opfilter() {
+
+    playlist2 = playlist2.filter(function (data) {
+        return data.id !== current_video.id && data.type === 'op';
+    });
+    current_video = playlist2[ getRandom(playlist2) ];
+    console.log(playlist2);
+    return current_video;
+}
+
 function getRandom(list) {
     return Math.floor( Math.random() * list.length );
 }
