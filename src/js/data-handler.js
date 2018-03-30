@@ -16,28 +16,54 @@ export function getNextVideo() {
     if (playlist2.length === 0) {
         playlist2 = playlist.slice();
     }
-
     return current_video;
 }
 
 export function edfilter() {
+  playlist2 = playlist.slice();
 
     playlist2 = playlist2.filter(function (data) {
         return data.id !== current_video.id && data.type === 'ed';
     });
     current_video = playlist2[ getRandom(playlist2) ];
-    console.log(playlist2);
     return current_video;
 }
 
 
 export function opfilter() {
+    playlist2 = playlist.slice();
 
     playlist2 = playlist2.filter(function (data) {
         return data.id !== current_video.id && data.type === 'op';
     });
     current_video = playlist2[ getRandom(playlist2) ];
-    console.log(playlist2);
+    return current_video;
+}
+export function seinenfilter() {
+    playlist2 = playlist.slice();
+
+    playlist2 = playlist2.filter(function (data) {
+        return data.id !== current_video.id && data.category === 'seinen';
+    });
+    current_video = playlist2[ getRandom(playlist2) ];
+    return current_video;
+}
+export function shonenfilter() {
+    playlist2 = playlist.slice();
+
+    playlist2 = playlist2.filter(function (data) {
+        return data.id !== current_video.id && data.category === 'shonen';
+    });
+    current_video = playlist2[ getRandom(playlist2) ];
+    return current_video;
+}
+export function shojofilter() {
+    playlist2 = playlist.slice();
+
+    playlist2 = playlist2.filter(function (data) {
+        return data.id !== current_video.id && data.category === 'shojo';
+    });
+    current_video = playlist2[ getRandom(playlist2) ];
     return current_video;
 }
 

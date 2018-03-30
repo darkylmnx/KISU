@@ -1,9 +1,9 @@
-import { getNextVideo,getPrevVideo, edfilter, opfilter } from './data-handler';
+import { getNextVideo,getPrevVideo, edfilter, opfilter, seinenfilter, shojofilter, shonenfilter } from './data-handler';
 
 export var player;
 export var videotime = 0;
 export default function onYouTubeIframeAPIReady() {
-  player = new YT.Player('aoe-player', {
+  window.p = player = new YT.Player('aoe-player', {
     playerVars: {
       autoplay: 1,
       controls: 0,
@@ -19,9 +19,14 @@ export default function onYouTubeIframeAPIReady() {
     height: '100%',
     width: '100%',
     events: {
-      onReady: function() {
+      onReady() {
         loadNextVideo();
         //currentTime();
+      },
+      onStateChange(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+          loadNextVideo();
+        }
       }
     }
   });
@@ -188,7 +193,7 @@ export function loadPrevVideo(){
 }
 
 // FILTER FUNCTIONS -------------------
-<<<<<<< HEAD
+
 var opBtn = document.querySelector('#op');
 var enBtn = document.querySelector('#en');
 var seinenBtn = document.querySelector('#seinen');
@@ -196,108 +201,47 @@ var shonenBtn = document.querySelector('#shonen');
 var shojoBtn = document.querySelector('#shojo');
 
 export function opFilter(){
+  var video = opfilter();
   opBtn.classList.toggle('bordered');
   enBtn.classList.remove('bordered');
   seinenBtn.classList.remove('bordered');
   shonenBtn.classList.remove('bordered');
   shojoBtn.classList.remove('bordered');
+  return video;
 };
 export function enFilter(){
+  var video = edfilter();
   opBtn.classList.remove('bordered');
   enBtn.classList.toggle('bordered');
   seinenBtn.classList.remove('bordered');
   shonenBtn.classList.remove('bordered');
   shojoBtn.classList.remove('bordered');
-=======
-export function opFilter(){
-    var video = opfilter();
-    player.loadVideoById(video.id);
-    title.innerHTML = video.title;
-    anime.innerHTML = video.anime;
-    author.innerHTML = video.author;
-    type.innerHTML = video.type;
-    var videoType = video.type;
-    if (videoType === 'op') {
-        infosType.classList.add('op');
-        infosType.classList.remove('en');
-    }
-    else {
-        infosType.classList.add('en');
-        infosType.classList.remove('op');
-    }
-    category.innerHTML = video.category;
-    var videoCategory = video.category;
-    if (videoCategory === 'seinen') {
-        infosCategory.classList.add('seinen');
-        infosCategory.classList.remove('shonen');
-        infosCategory.classList.remove('shojo');
-    }
-    else if (videoCategory === 'shonen') {
-        infosCategory.classList.remove('seinen');
-        infosCategory.classList.add('shonen');
-        infosCategory.classList.remove('shojo');
-    }
-    else {
-        infosCategory.classList.remove('seinen');
-        infosCategory.classList.remove('shonen');
-        infosCategory.classList.add('shojo');
-    }
-    return video;
-};
-export function enFilter(){
-    var video = edfilter();
-    player.loadVideoById(video.id);
-    title.innerHTML = video.title;
-    anime.innerHTML = video.anime;
-    author.innerHTML = video.author;
-    type.innerHTML = video.type;
-    var videoType = video.type;
-    if (videoType === 'op') {
-        infosType.classList.add('op');
-        infosType.classList.remove('en');
-    }
-    else {
-        infosType.classList.add('en');
-        infosType.classList.remove('op');
-    }
-    category.innerHTML = video.category;
-    var videoCategory = video.category;
-    if (videoCategory === 'seinen') {
-        infosCategory.classList.add('seinen');
-        infosCategory.classList.remove('shonen');
-        infosCategory.classList.remove('shojo');
-    }
-    else if (videoCategory === 'shonen') {
-        infosCategory.classList.remove('seinen');
-        infosCategory.classList.add('shonen');
-        infosCategory.classList.remove('shojo');
-    }
-    else {
-        infosCategory.classList.remove('seinen');
-        infosCategory.classList.remove('shonen');
-        infosCategory.classList.add('shojo');
-    }
-    return video;
->>>>>>> cebf760bdb6c9a2047c522088c6d7d8b86e1bf04
+  return video;
 };
 export function seinenFilter(){
+  var video = seinenfilter();
   opBtn.classList.remove('bordered');
-  enBtn.classList.remove('bordered');
-  seinenBtn.classList.toggle('bordered');
+  enBtn.classList.toggle('bordered');
+  seinenBtn.classList.remove('bordered');
   shonenBtn.classList.remove('bordered');
   shojoBtn.classList.remove('bordered');
+  return video;
 };
 export function shonenFilter(){
+  var video = shonenfilter();
   opBtn.classList.remove('bordered');
-  enBtn.classList.remove('bordered');
-  seinenBtn.classList.remove('bordered');
-  shonenBtn.classList.toggle('bordered');
-  shojoBtn.classList.remove('bordered');
-};
-export function shojoFilter(){
-  opBtn.classList.remove('bordered');
-  enBtn.classList.remove('bordered');
+  enBtn.classList.toggle('bordered');
   seinenBtn.classList.remove('bordered');
   shonenBtn.classList.remove('bordered');
-  shojoBtn.classList.toggle('bordered');
+  shojoBtn.classList.remove('bordered');
+  return video;
+};
+export function shojoFilter(){
+  var video = shojofilter();
+  opBtn.classList.remove('bordered');
+  enBtn.classList.toggle('bordered');
+  seinenBtn.classList.remove('bordered');
+  shonenBtn.classList.remove('bordered');
+  shojoBtn.classList.remove('bordered');
+  return video;
 };

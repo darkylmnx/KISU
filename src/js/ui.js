@@ -44,18 +44,21 @@ nextBtn.addEventListener('click', function() {
   renderUI(video);
 });
 
-document.addEventListener('keydown', function() {
+document.addEventListener('keydown', function(event) {
   if (event.which === 39) {
+    event.preventDefault();
     loadNextVideo();
   }
 });
-document.addEventListener('keydown', function() {
+document.addEventListener('keydown', function(event) {
   if (event.which === 37) {
+    event.preventDefault();
     loadPrevVideo();
   }
 });
-document.addEventListener('keydown', function() {
+document.addEventListener('keydown', function(event) {
   if (event.which === 32) {
+    event.preventDefault();
     if (player.getPlayerState() === 2) {
       playVideo();
     } else {
