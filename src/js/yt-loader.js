@@ -1,4 +1,4 @@
-import { getNextVideo,getPrevVideo, edfilter, opfilter, seinenfilter, shojofilter, shonenfilter } from './data-handler';
+import { getNextVideo,getPrevVideo, edfilter, opfilter, seinenfilter, shojofilter, shonenfilter,displayOverlay } from './data-handler';
 
 export var player;
 export var videotime = 0;
@@ -110,6 +110,12 @@ export function loadNextVideo() {
     infosCategory.classList.remove('shonen');
     infosCategory.classList.add('shojo');
   }
+
+  window.setTimeout(function() {
+      infos.classList.add('disappear');
+      overlay.style.background = "";
+  },2000);
+
   return video;
 }
 export function loadPrevVideo(){
@@ -150,6 +156,10 @@ export function loadPrevVideo(){
     infosCategory.classList.remove('shonen');
     infosCategory.classList.add('shojo');
   }
+  window.setTimeout(function() {
+      infos.classList.add('disappear');
+      overlay.style.background = "";
+  },2000);
   return video;
 }
 

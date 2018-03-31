@@ -89,3 +89,10 @@ export function getPrevVideo() {
         return current_video;
     }
 }
+
+export function displayOverlay(){
+    window.setTimeout(function(infos) {
+        infos.classList.add('disappear');
+        console.log('k')
+    },3000);
+}
