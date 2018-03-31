@@ -1,0 +1,120 @@
+// PLAYER -----------------------------
+.player {
+	width: 300%;
+  left: -100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	&_buttonsBox {
+		display: flex;
+		position: absolute;
+		left: 50%;
+		bottom: 30px;
+		z-index: 4;
+		transform: translate(-50%, 0);
+		&:hover > .player_buttonsBox_buttons {
+			opacity: 1;
+		}
+		&:hover > .header_menu {
+			opacity: 1;
+		}
+		&_buttons {
+			background: rgba(0,0,0,0.75);
+			padding: 10px;
+			margin: 0 5px;
+			border-radius: 50px;
+			opacity: 0.25;
+			transition: all 0.3s ease;
+			cursor: default;
+			&_button {
+				background: rgba(0,0,0,0);
+				background-size: 20px 20px;
+				border: 0;
+				width: 20px;
+				height: 20px;
+				margin: 0 10px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+#mute {
+	background: url('../assets/imgs/icons/unmute.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	display: none;
+	&:hover {
+		background: url('../assets/imgs/icons/unmute-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#unmute {
+	background: url('../assets/imgs/icons/mute.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	display: none;
+	&:hover {
+		background: url('../assets/imgs/icons/mute-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#play {
+	background: url('../assets/imgs/icons/play.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	display: none;
+	&:hover {
+		background: url('../assets/imgs/icons/play-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#pause {
+	background: url('../assets/imgs/icons/pause.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	display: none;
+	&:hover {
+		background: url('../assets/imgs/icons/pause-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#previous {
+	background: url('../assets/imgs/icons/previous.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	&:hover {
+		background: url('../assets/imgs/icons/previous-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#next {
+	background: url('../assets/imgs/icons/next.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	&:hover {
+		background: url('../assets/imgs/icons/next-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#search {
+	width: 20px;
+	background: url('../assets/imgs/icons/search.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	&:hover {
+		width: 20px;
+		background: url('../assets/imgs/icons/search-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}
+#about {
+	width: 20px;
+	background: url('../assets/imgs/icons/svg.svg') no-repeat center;
+	background-size: 20px 20px;
+	transition: all 0.3s ease;
+	&:hover {
+		width: 20px;
+		background: url('../assets/imgs/icons/svg-anim.svg') no-repeat center;
+		background-size: 20px 20px;
+	}
+}

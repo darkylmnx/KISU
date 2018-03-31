@@ -1,0 +1,23 @@
+// HEADER -----------------------------
+.header {
+  width: 100%;
+	padding: 0 30px 0 20px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	position: absolute;
+	z-index: 2;
+	&_title {
+		display: flex;
+	  align-items: center;
+		&_icon {
+			width: 60px;
+	    height: 60px;
+		}
+		&_logo {
+	    width: 100px;
+	    height: 100px;
+	  }
+  }
+}

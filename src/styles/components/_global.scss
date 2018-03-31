@@ -1,0 +1,81 @@
+// GLOBAL -----------------------------
+body {
+  background: #000;
+  font-size: 62.5%;
+	overflow: hidden;
+}
+button:focus,
+button:active,
+input:focus {
+	outline: 0;
+}
+.is-active {
+	display: inline-block !important;
+}
+.is-visible {
+	transform: scale(1)!important;
+}
+.toLeft {
+	left: 0 !important;
+}
+.toRight {
+	right: 0 !important;
+}
+.disappear {
+	opacity: 0 !important;
+}
+.bordered {
+	border: 2px $red solid !important;
+	color: $red !important;
+	background: #fff !important;
+}
+.rotate {
+	top: 50% !important;
+	transform: translate(0, -50%) rotate(135deg);
+}
+.invRotate {
+	top: 50% !important;
+	transform: translate(0, -50%) rotate(-135deg);
+}
+
+
+.op {
+	background: $opColor;
+	color: #000;
+	&:hover {
+		background: #fff;
+		color: $opColor;
+	}
+}
+.en {
+	background: $enColor;
+	color: #000;
+	&:hover {
+		background: #fff;
+		color: $enColor;
+	}
+}
+.shonen {
+  background: $snColor;
+  color: #000;
+	&:hover {
+		background: #fff;
+		color: $snColor;
+	}
+}
+.seinen {
+  background: $siColor;
+  color: #000;
+	&:hover {
+		background: #fff;
+		color: $siColor;
+	}
+}
+.shojo {
+  background: $sjColor;
+  color: #000;
+	&:hover {
+		background: #fff;
+		color: $sjColor;
+	}
+}

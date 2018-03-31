@@ -1,0 +1,100 @@
+// INFOS ------------------------------
+.infos {
+	position: absolute;
+	left: 50px;
+	bottom: 100px;
+	z-index: 1;
+	transition: all 0.3s ease;
+	&_titleBox {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-family: $Lato-Bld;
+	@include for-size(tablet-portrait-up){
+		flex-direction: row;
+		align-items: flex-end;
+	}
+		&_title {
+		  font-size: $Norm;
+			@include for-size(tablet-portrait-up){
+				font-size: $Med;
+			}
+			@include for-size(desktop-up){
+				font-size: $Big;
+			}
+		}
+
+		&_span {
+			margin: 0 15px;
+			font-family: $Lato-Bld;
+			font-size: $Norm;
+				@include for-size(tablet-portrait-up){
+					font-size: $Norm;
+				}
+				@include for-size(desktop-up){
+					font-size: $Med;
+				}
+		 }
+  }
+  &_author {
+	color: #fff;
+	margin: 15px 0 40px 0;
+    text-transform: uppercase;
+    font-family: $Lato-Bld;
+	font-size: $xSml;
+		@include for-size(tablet-portrait-up){
+		font-size: $Med;
+		}
+		@include for-size(desktop-up){
+		font-size: $Big;
+		}
+  }
+  &_tags {
+		&_type {
+			font-family: $Lato;
+      padding: 5px;
+      margin: 0 10px 0 0;
+	  border-radius: 5px;
+      text-transform: uppercase;
+      font-size: $xSml;
+    }
+    &_tag {
+			text-transform: uppercase;
+      padding: 5px;
+      margin-right: 15px;
+      border-radius: 5px;
+      font-family: $Lato;
+      font-size: $xSml;
+    }
+  }
+}
+@media (max-width: 480px) {
+	background: red;
+}
+
+// MOREINFOS --------------------------
+.moreInfos {
+	background: rgba(0,0,0,0.75);
+	color: #fff;
+	width: 20%;
+	height: auto;
+	padding: 20px;
+	border-radius: 20px;
+	font-family: $Lato;
+	position: absolute;
+	z-index: 2;
+	bottom: 30px;
+	right: 30px;
+	transform: scale(0);
+	transform-origin: bottom right;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	&_titleResume {
+		font-size: $Sml;
+		margin-bottom: 10px;
+	}
+	&_resume {
+		font-size: $xSml;
+	}
+}
