@@ -87,21 +87,27 @@ input:focus {
 // ABOUT ------------------------------
 .about {
 	background: rgba(0,0,0,0.9);
-	width: 350px;
+	width: 100%;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	position: absolute;
-	left: -350px;
+	left: -100%;
 	z-index: 4;
 	transition: all 0.5s ease;
+	@include for-size(tablet-portrait-up){
+		width: 350px;
+		left: -350px;
+	}
 	&_title {
 		color: $red;
-		margin-bottom: 30px;
 		font-family: $Lato-Bld;
 		font-size: $Big;
 		padding: 25px 25px 0;
+		@include for-size(tablet-portrait-up){
+			margin-bottom: 30px;
+		}
 	}
 	&_subTitle {
 		color: #fff;
@@ -118,7 +124,10 @@ input:focus {
 		line-height: 1.2;
 	}
 	&_last_text{
-		margin-bottom: 62px;
+		margin-bottom: 30px;
+		@include for-size(tablet-portrait-up){
+			margin-bottom: 62px;
+		}
 	}
 	&_link {
 		color: $red;
@@ -235,8 +244,13 @@ input:focus {
 	&_titleBox {
 	color: #fff;
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	align-items: flex-start;
 	font-family: $Lato-Bld;
+	@include for-size(tablet-portrait-up){
+		flex-direction: row;
+		align-items: flex-end;
+	}
 		&_title {
 		  font-size: $Norm;
 			@include for-size(tablet-portrait-up){
@@ -290,6 +304,9 @@ input:focus {
       font-size: $xSml;
     }
   }
+}
+@media (max-width: 480px) {
+	background: red;
 }
 
 // MOREINFOS --------------------------
@@ -442,12 +459,16 @@ input:focus {
 // SEARCH -----------------------------
 .search {
 	background: rgba(0,0,0,0.9);
-	width: 350px;
+	width: 100%;
 	height: 100vh;
 	position: absolute;
-	z-index: 1;
-	right: -350px;
+	z-index: 2;
+	right: -100%;
 	transition: all 0.5s ease-out;
+	@include for-size(tablet-portrait-up){
+		width: 350px;
+		right: -350px;
+	}
 	&_title {
 		color: $red;
 		font-family: $Lato-Bld;
@@ -517,9 +538,13 @@ input:focus {
 		width: auto;
 		height: 200px;
 		position: absolute;
-		left: 50%;
-		bottom: 50px;
-		transform: translate(-50%, 0);
+		right: 20px;
+		bottom: 20px;
+		@include for-size(tablet-portrait-up){
+			right: 50%;
+			bottom: 50px;
+			transform: translate(50%, 0);
+		}
 	}
 }
 
