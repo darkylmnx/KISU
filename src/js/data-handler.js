@@ -18,23 +18,33 @@ export function getNextVideo() {
 }
 
 export function edfilter() {
-  playlist2 = playlist.slice();
+
+    current_video = playlist2[ getRandom(playlist2) ];
 
     playlist2 = playlist2.filter(function (data) {
         return data.id !== current_video.id && data.type === 'ed';
     });
-    current_video = playlist2[ getRandom(playlist2) ];
+
+    if (playlist2.length === 0) {
+        playlist2 = playlist.slice();
+    }
+
     return current_video;
 }
 
 
 export function opfilter() {
-    playlist2 = playlist.slice();
+    
+    current_video = playlist2[ getRandom(playlist2) ];
 
     playlist2 = playlist2.filter(function (data) {
         return data.id !== current_video.id && data.type === 'op';
     });
-    current_video = playlist2[ getRandom(playlist2) ];
+
+    if (playlist2.length === 0) {
+        playlist2 = playlist.slice();
+    }
+
     return current_video;
 }
 
@@ -88,11 +98,4 @@ export function getPrevVideo() {
         }
         return current_video;
     }
-}
-
-export function displayOverlay(){
-    window.setTimeout(function(infos) {
-        infos.classList.add('disappear');
-        console.log('k')
-    },3000);
 }
