@@ -221,8 +221,8 @@ export function enFilter(){
 export function seinenFilter(){
   var video = seinenfilter();
   opBtn.classList.remove('bordered');
-  enBtn.classList.toggle('bordered');
-  seinenBtn.classList.remove('bordered');
+  enBtn.classList.remove('bordered');
+  seinenBtn.classList.toggle('bordered');
   shonenBtn.classList.remove('bordered');
   shojoBtn.classList.remove('bordered');
   return video;
@@ -230,18 +230,18 @@ export function seinenFilter(){
 export function shonenFilter(){
   var video = shonenfilter();
   opBtn.classList.remove('bordered');
-  enBtn.classList.toggle('bordered');
+  enBtn.classList.remove('bordered');
   seinenBtn.classList.remove('bordered');
-  shonenBtn.classList.remove('bordered');
+  shonenBtn.classList.toggle('bordered');
   shojoBtn.classList.remove('bordered');
   return video;
 };
 export function shojoFilter(){
   var video = shojofilter();
   opBtn.classList.remove('bordered');
-  enBtn.classList.toggle('bordered');
+  enBtn.classList.remove('bordered');
   seinenBtn.classList.remove('bordered');
   shonenBtn.classList.remove('bordered');
-  shojoBtn.classList.remove('bordered');
+  shojoBtn.classList.toggle('bordered');
   return video;
 };
