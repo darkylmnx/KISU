@@ -15,7 +15,7 @@
 ### client
 - [x] AAV i can see a player when i arrive on the website
 - [x] AAV i see in the player a random video
-- [ ] AAV i can control the player :
+- [x] AAV i can control the player :
     - [x] next / previous
     - [x] play / pause
     - [x] mute / unmute
