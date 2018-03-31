@@ -126,7 +126,7 @@ document.onmousemove = (function() {
   }, thread;
   return function() {
     clearTimeout(thread);
-    thread = setTimeout(onmousestop, 3000);
+    thread = setTimeout(onmousestop, 2000);
   };
 })();
 

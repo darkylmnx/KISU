@@ -31,14 +31,6 @@ export default function onYouTubeIframeAPIReady() {
     }
   });
 }
-/*export function currentTime() {
-    function updateTime() {
-        if(player && player.getCurrentTime) {
-            videotime = player.getCurrentTime();
-        }
-    }
-    timeupdater = setInterval(updateTime, 1000);
-}*/
 
 var title = document.querySelector('#title');
 var anime = document.querySelector('#anime');
@@ -59,55 +51,23 @@ export function muteVideo(){
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
   player.unMute();
-};
+}
 export function unmuteVideo(){
   muteBtn.classList.toggle('is-active');
   unmuteBtn.classList.toggle('is-active');
   player.mute();
-};
+}
 export function playVideo(){
   playBtn.classList.remove('is-active');
   pauseBtn.classList.add('is-active');
   player.playVideo();
-};
+}
 export function pauseVideo(){
   playBtn.classList.add('is-active');
   pauseBtn.classList.remove('is-active');
   player.pauseVideo();
-};
-function displayInfo(){
-    player.loadVideoById(video.id);
-    title.innerHTML = video.title;
-    anime.innerHTML = video.anime;
-    author.innerHTML = video.author;
-    type.innerHTML = video.type;
-    var videoType = video.type;
-    if (videoType === 'op') {
-        infosType.classList.add('op');
-        infosType.classList.remove('en');
-    }
-    else {
-        infosType.classList.add('en');
-        infosType.classList.remove('op');
-    }
-    category.innerHTML = video.category;
-    var videoCategory = video.category;
-    if (videoCategory === 'seinen') {
-        infosCategory.classList.add('seinen');
-        infosCategory.classList.remove('shonen');
-        infosCategory.classList.remove('shojo');
-    }
-    else if (videoCategory === 'shonen') {
-        infosCategory.classList.remove('seinen');
-        infosCategory.classList.add('shonen');
-        infosCategory.classList.remove('shojo');
-    }
-    else {
-        infosCategory.classList.remove('seinen');
-        infosCategory.classList.remove('shonen');
-        infosCategory.classList.add('shojo');
-    }
 }
+
 
 // LOAD PREV/NEXT INFOS VIDEO FUNCTIONS
 var infos = document.querySelector('.infos');
@@ -118,8 +78,8 @@ export function loadNextVideo() {
   player.loadVideoById(video.id);
   overlay.style.background = "rgba(0,0,0,0.75)";
   infos.classList.remove('disappear');
-  playBtn.classList.toggle('is-active');
-  pauseBtn.classList.toggle('is-active');
+  playBtn.classList.remove('is-active');
+  pauseBtn.classList.add('is-active');
   title.innerHTML = video.title;
   anime.innerHTML = video.anime;
   author.innerHTML = video.author;
@@ -155,8 +115,9 @@ export function loadNextVideo() {
 export function loadPrevVideo(){
   overlay.style.background = "rgba(0,0,0,0.75)";
   infos.classList.remove('disappear');
-  playBtn.classList.toggle('is-active');
   pauseBtn.classList.toggle('is-active');
+  playBtn.classList.remove('is-active');
+  pauseBtn.classList.add('is-active');
   var video = getPrevVideo();
   player.loadVideoById(video.id);
   title.innerHTML = video.title;
@@ -208,7 +169,7 @@ export function opFilter(){
   shonenBtn.classList.remove('bordered');
   shojoBtn.classList.remove('bordered');
   return video;
-};
+}
 export function enFilter(){
   var video = edfilter();
   opBtn.classList.remove('bordered');
@@ -217,7 +178,7 @@ export function enFilter(){
   shonenBtn.classList.remove('bordered');
   shojoBtn.classList.remove('bordered');
   return video;
-};
+}
 export function seinenFilter(){
   var video = seinenfilter();
   opBtn.classList.remove('bordered');
@@ -226,7 +187,7 @@ export function seinenFilter(){
   shonenBtn.classList.remove('bordered');
   shojoBtn.classList.remove('bordered');
   return video;
-};
+}
 export function shonenFilter(){
   var video = shonenfilter();
   opBtn.classList.remove('bordered');
@@ -235,7 +196,7 @@ export function shonenFilter(){
   shonenBtn.classList.toggle('bordered');
   shojoBtn.classList.remove('bordered');
   return video;
-};
+}
 export function shojoFilter(){
   var video = shojofilter();
   opBtn.classList.remove('bordered');
@@ -244,4 +205,4 @@ export function shojoFilter(){
   shonenBtn.classList.remove('bordered');
   shojoBtn.classList.toggle('bordered');
   return video;
-};
+}

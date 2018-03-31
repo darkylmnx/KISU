@@ -1,5 +1,3 @@
-import {player} from "./yt-loader";
-
 var playlist2 = playlist.slice();
 var current_video;
 var memo_video = [];
@@ -39,6 +37,7 @@ export function opfilter() {
     current_video = playlist2[ getRandom(playlist2) ];
     return current_video;
 }
+
 export function seinenfilter() {
     playlist2 = playlist.slice();
 
@@ -48,6 +47,7 @@ export function seinenfilter() {
     current_video = playlist2[ getRandom(playlist2) ];
     return current_video;
 }
+
 export function shonenfilter() {
     playlist2 = playlist.slice();
 
@@ -57,6 +57,7 @@ export function shonenfilter() {
     current_video = playlist2[ getRandom(playlist2) ];
     return current_video;
 }
+
 export function shojofilter() {
     playlist2 = playlist.slice();
 
