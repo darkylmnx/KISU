@@ -1,3 +1,6 @@
+//IMPORTS
+@import "./mixins/forSize";
+
 // FONTS
 @font-face {
 	font-family: "Lato-Light";
@@ -229,26 +232,45 @@ input:focus {
 	bottom: 100px;
 	z-index: 1;
 	transition: all 0.3s ease;
-  &_titleBox {
-		color: #fff;
-    display: flex;
-    align-items: flex-end;
-		font-family: $Lato-Bld;
-    &_title {
-      font-size: $Big;
-    }
+	&_titleBox {
+	color: #fff;
+	display: flex;
+	align-items: flex-end;
+	font-family: $Lato-Bld;
+		&_title {
+		  font-size: $Norm;
+			@include for-size(tablet-portrait-up){
+				font-size: $Med;
+			}
+			@include for-size(desktop-up){
+				font-size: $Big;
+			}
+		}
+
 		&_span {
 			margin: 0 15px;
 			font-family: $Lato-Bld;
-			font-size: $Big;
-		}
+			font-size: $Norm;
+				@include for-size(tablet-portrait-up){
+					font-size: $Norm;
+				}
+				@include for-size(desktop-up){
+					font-size: $Med;
+				}
+		 }
   }
   &_author {
-		color: #fff;
-		margin: 15px 0 40px 0;
+	color: #fff;
+	margin: 15px 0 40px 0;
     text-transform: uppercase;
     font-family: $Lato-Bld;
-    font-size: $Med;
+	font-size: $xSml;
+		@include for-size(tablet-portrait-up){
+		font-size: $Med;
+		}
+		@include for-size(desktop-up){
+		font-size: $Big;
+		}
   }
   &_tags {
 		&_type {
@@ -467,7 +489,6 @@ input:focus {
 		}
 		&_button {
 			color: #000;
-			border: 0;
 			padding: 5px 10px;
 			margin-right: 5px;
 			font-size: $xSml;
@@ -486,7 +507,6 @@ input:focus {
 		}
 		&_button {
 			color: #000;
-			border: 0;
 			padding: 5px 10px;
 			margin-right: 5px;
 			font-size: $xSml;

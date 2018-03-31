@@ -1,5 +1,5 @@
-import '../scss/reset.scss';
-import '../scss/style.scss';
+import '../styles/reset.scss';
+import '../styles/style.scss';
 
 import './video-data';
 import onYouTubeIframeAPIReady from './yt-loader';
