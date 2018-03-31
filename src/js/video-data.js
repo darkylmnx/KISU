@@ -144,15 +144,6 @@
             "category": "shojo"
         },
         {
-            "id": "63UceXudIhY",
-            "anime": "Card Captor Sakura",
-            "title": "Fruits Candy",
-            "author": "Kojima Megumi",
-            "type": "ed",
-            "nb": "3",
-            "category": "shojo"
-        },
-        {
             "id": "sbwT8yJjtUQ",
             "anime": "Card Captor Sakura Clear Card Hen",
             "title": "CLEAR",
@@ -1251,15 +1242,6 @@
             "title": "the WORLD",
             "author": "Nightmare",
             "type": "op",
-            "nb": "1",
-            "category": "seinen"
-        },
-        {
-            "id": "jX0gZ59-LUs",
-            "anime": "Death Note",
-            "title": "Alumina",
-            "author": "NIGHTMARE",
-            "type": "ed",
             "nb": "1",
             "category": "seinen"
         },
