@@ -6,16 +6,16 @@
 
 ## Features:
 
-1. [ ] **Must have:**
+1. [x] **Must have:**
     1. [x] Create a player
     2. [x] Define some database
     3. [x] Show current video informations (title, author, category)
-    4. [ ] Autoplay
+    4. [x] Autoplay
 
 2. [ ] **Have:**
-    1. [ ] Sort / Filter
+    1. [x] Sort / Filter
     2. [x] Random
-    3. [ ] More informations
+    3. [x] More informations
     4. [ ] Share current video
 
 3. [ ] **Best Case:**
